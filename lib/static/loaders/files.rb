@@ -17,17 +17,19 @@ module Static
         YAML.safe_load(str, _whitelist_classes = [Date, Time])
       }.freeze
 
-      include Import["database.rom"]
+      include Import[
+        "database.rom",
+        "inflector",
+      ]
 
       def call(dir, pattern = "**/*")
         records = Dir[File.join(dir, pattern)]
           .select(&File.method(:file?))
-          .map { |file| parse_data(file, dir: dir) }
+          .map { |file_name| parse_data(file_name, dir: dir) }
 
         records.each do |record|
-          # Hard code `:articles` right now
-          # Next, we'll infer this from an attribute or a file extension
-          rom.relations[:articles].insert(record)
+          type = record.delete(:type)
+          rom.relations.fetch(inflector[type, :pluralize]).insert(record)
         end
 
         records
@@ -35,13 +37,24 @@ module Static
 
       private
 
-      def parse_data(file, dir:)
-        parsed_file = FrontMatterParser::Parser.parse_file(file, loader: FRONT_MATTER_LOADER)
+      def parse_data(file_name, dir:)
+        parsed_file = FrontMatterParser::Parser.parse_file(file_name, loader: FRONT_MATTER_LOADER)
+        data = Functions[:symbolize][parsed_file.front_matter]
+        type = data[:type] || infer_type_from_file_name(file_name)
 
-        Functions[:symbolize][parsed_file.front_matter].merge(
-          path: Pathname(file).relative_path_from(dir).to_s,
+        data.merge(
+          type: type,
+          path: Pathname(file_name).relative_path_from(dir).to_s,
           body: parsed_file.content,
         )
+      end
+
+      FILE_WITH_TYPE_REGEXP = %r{^(?<name>[^\.]+)\.(?<type>[^\.]+)\.(?<exts>.+)$}
+
+      def infer_type_from_file_name(file_name)
+        if (match = FILE_WITH_TYPE_REGEXP.match(file_name))
+          match[:type]
+        end
       end
     end
   end

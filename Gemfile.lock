@@ -103,6 +103,8 @@ PLATFORMS
 DEPENDENCIES
   byebug
   commonmarker
+  dry-core
+  dry-inflector
   dry-system
   dry-types
   dry-view
