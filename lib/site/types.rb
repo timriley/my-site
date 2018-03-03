@@ -2,7 +2,7 @@
 
 require "dry/types"
 
-module Static
+module Site
   module Types
     include Dry::Types.module
   end

@@ -1,9 +1,10 @@
-Static::Container.boot :settings, from: :system do
+Site::Container.boot :settings, from: :system do
   before :init do
-    require "static/types"
+    require "site/types"
   end
 
   settings do
-    # Settings go here
+    key :import_dir, Site::Types::Strict::String
+    key :export_dir, Site::Types::Strict::String
   end
 end

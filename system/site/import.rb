@@ -1,7 +1,7 @@
 # auto_register: false
 
-require "static/container"
+require "site/container"
 
-module Static
+module Site
   Import = Container.injector
 end

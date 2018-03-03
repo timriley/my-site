@@ -2,7 +2,7 @@ require "transproc/registry"
 require "dry/inflector"
 require "dry/core/cache"
 
-module Static
+module Site
   class Inflector
     extend Dry::Core::Cache
 

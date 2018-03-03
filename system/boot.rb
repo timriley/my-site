@@ -3,6 +3,6 @@ begin
 rescue LoadError
 end
 
-require_relative "../lib/static/container"
+require_relative "../system/site/container"
 
-Static::Container.finalize!
+Site::Container.finalize!

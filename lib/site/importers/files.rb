@@ -3,10 +3,10 @@ require "pathname"
 require "transproc"
 require "yaml"
 
-require "static/import"
+require "site/import"
 
-module Static
-  module Loaders
+module Site
+  module Importers
     class Files
       module Functions
         extend Transproc::Registry
@@ -44,7 +44,7 @@ module Static
 
         data.merge(
           type: type,
-          path: Pathname(file_name).relative_path_from(dir).to_s,
+          path: Pathname(file_name).relative_path_from(Pathname(dir)).to_s,
           body: parsed_file.content,
         )
       end

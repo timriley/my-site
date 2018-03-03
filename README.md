@@ -4,7 +4,8 @@ Work-in-progress personal website, and proof-of-concept static site generator us
 
 ## TODO
 
-- [-] Work out default values in relation schema attribute types _(seems not possible right now, using auto-migrations)_
+- [x] Work out default values in relation schema attribute types _(seems not possible right now, using auto-migrations)_
 - [x] Detect relation based on file extension or `type` attribute
 - [ ] Page generation rules
-- [ ] dry-view integration
+- [x] dry-view integration
+- [ ] Logging of prepare/generate (via pub/sub?)

@@ -1,4 +1,4 @@
-Static::Container.boot :database, namespace: true do |system|
+Site::Container.boot :database, namespace: true do |site|
   init do
     require "sequel"
     require "rom"
@@ -23,14 +23,10 @@ Static::Container.boot :database, namespace: true do |system|
 
   start do
     config = container["database.config"]
-    config.auto_registration system.root.join("lib/database")
+    config.auto_registration site.root.join("lib/database")
 
     config.gateways[:default].auto_migrate!(config, inline: true)
 
     register "rom", ROM.container(config)
-
-    # require "static/database/migrate"
-    # migrate = Static::Database::Migrate.new
-    # migrate.(system.config.root.join("config/schema.yml"), rom: rom)
   end
 end
