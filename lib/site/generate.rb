@@ -11,6 +11,7 @@ module Site
       "settings",
       export: "exporters.files",
       home_view: "views.home",
+      writing_view: "views.writing",
     ]
 
     def call(root)
@@ -20,6 +21,7 @@ module Site
       FileUtils.mkdir_p(export_dir)
 
       export.(export_dir, "index.html", home_view.())
+      export.(export_dir, "writing/index.html", writing_view.())
 
       Success(:ok)
     end
