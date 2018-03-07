@@ -1,6 +1,7 @@
 # auto_register: false
 
 require "dry/view/part"
+require "commonmarker"
 
 module Site
   module View
@@ -12,6 +13,10 @@ module Site
 
         def display_date
           published_at.strftime("%-m %B %Y")
+        end
+
+        def body_html
+          @body_html ||= CommonMarker.render_html(body)
         end
       end
     end
