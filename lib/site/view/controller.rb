@@ -1,5 +1,6 @@
 # auto_register: false
 
+require "builder"
 require "dry/view/controller"
 require "slim"
 require "site/container"

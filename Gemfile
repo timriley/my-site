@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem "builder"
 gem "commonmarker"
 gem "front_matter_parser", "~> 0.1", ">= 0.1.1"
 gem "dry-core"

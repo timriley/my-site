@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    builder (3.2.3)
     byebug (10.0.0)
     coderay (1.1.2)
     commonmarker (0.17.7.1)
@@ -109,9 +110,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  builder
   byebug
   commonmarker
-  concurrent-ruby
   dry-core
   dry-inflector
   dry-monads (= 1.0.0.beta1)
