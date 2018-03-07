@@ -20,6 +20,10 @@ module Database
         where { !published_at.is(nil) }
       end
 
+      def internal
+        where { external_url.is(nil) }
+      end
+
       def by_date_descending
         order(self[:published_at].desc)
       end

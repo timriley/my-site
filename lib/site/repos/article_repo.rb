@@ -9,6 +9,14 @@ module Site
           .by_date_descending
           .to_a
       end
+
+      def internal_published
+        articles
+          .published
+          .internal
+          .by_date_descending
+          .to_a
+      end
     end
   end
 end

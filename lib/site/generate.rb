@@ -9,10 +9,12 @@ module Site
 
     include Import[
       "settings",
+      "repos.article_repo",
       export: "exporters.files",
       home_view: "views.home",
       writing_view: "views.writing",
       feed_view: "views.feed",
+      article_view: "views.article",
     ]
 
     def call(root)
@@ -24,6 +26,10 @@ module Site
       export.(export_dir, "index.html", home_view.())
       export.(export_dir, "writing/index.html", writing_view.())
       export.(export_dir, "feed.xml", feed_view.())
+
+      article_repo.internal_published.each do |article|
+        export.(export_dir, "articles/#{article.permalink}/index.html", article_view.(article: article))
+      end
 
       Success(:ok)
     end
