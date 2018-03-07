@@ -14,6 +14,7 @@ module Site
       home_view: "views.home",
       writing_view: "views.writing",
       feed_view: "views.feed",
+      about_view: "views.about",
       article_view: "views.article",
     ]
 
@@ -26,6 +27,7 @@ module Site
       export.(export_dir, "index.html", home_view.())
       export.(export_dir, "writing/index.html", writing_view.())
       export.(export_dir, "feed.xml", feed_view.())
+      export.(export_dir, "about/index.html", about_view.())
 
       article_repo.internal_published.each do |article|
         export.(export_dir, "articles/#{article.permalink}/index.html", article_view.(article: article))
