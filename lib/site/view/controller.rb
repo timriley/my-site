@@ -13,6 +13,14 @@ module Site
         config.context = Container["view.context"]
         config.layout = "site"
       end
+
+      def call(context: nil, **input)
+        # Always provide a new context object, so we don't carry over state
+        # between renderings
+        context ||= config.context.new
+
+        super(context: context, **input)
+      end
     end
   end
 end
