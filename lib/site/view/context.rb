@@ -13,8 +13,13 @@ module Site
 
       def_delegators :settings, :site_name, :site_author, :site_url
 
-      def initialize(*)
-        super
+      attr_reader :current_path
+
+      def initialize(current_path: nil, **deps)
+        super(**deps)
+
+        @deps = deps
+        @current_path = current_path
         @page_title = nil
       end
 
@@ -26,8 +31,8 @@ module Site
         end
       end
 
-      def new
-        self.class.new
+      def new(**new_options)
+        self.class.new(@deps.merge(current_path: current_path).merge(new_options))
       end
     end
   end

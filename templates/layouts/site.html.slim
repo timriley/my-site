@@ -6,10 +6,13 @@ html
     nav
       ul
         li
-          a href="/" Home
+          a class=("current" if current_path == "home") href="/"
+            | Home
         li
-          a href="/writing" Writing
+          a class=("current" if current_path == "writing" || current_path =~ /^articles/) href="/writing"
+            | Writing
         li
-          a href="/about" About
+          a class=("current" if current_path == "about") href="/about"
+            | About
 
     == yield

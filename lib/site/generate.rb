@@ -24,16 +24,22 @@ module Site
       FileUtils.rm_rf(export_dir, secure: true)
       FileUtils.mkdir_p(export_dir)
 
-      export.(export_dir, "index.html", home_view.())
-      export.(export_dir, "writing/index.html", writing_view.())
-      export.(export_dir, "feed.xml", feed_view.())
-      export.(export_dir, "about/index.html", about_view.())
+      render export_dir, "index.html", home_view
+      render export_dir, "writing/index.html", writing_view
+      render export_dir, "feed.xml", feed_view
+      render export_dir, "about/index.html", about_view
 
       article_repo.internal_published.each do |article|
-        export.(export_dir, "articles/#{article.permalink}/index.html", article_view.(article: article))
+        render export_dir, "articles/#{article.permalink}/index.html", article_view, article: article
       end
 
       Success(:ok)
+    end
+
+    def render(export_dir, path, view, **input)
+      context = view.class.config.context.new(current_path: path.sub(%r{/index.html$}, ""))
+
+      export.(export_dir, path, view.(context: context, **input))
     end
   end
 end
