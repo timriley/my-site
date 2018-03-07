@@ -9,6 +9,7 @@ module Site
     class Controller < Dry::View::Controller
       configure do |config|
         config.paths = [Container.root.join("templates")]
+        config.context = Container["view.context"]
         config.layout = "site"
       end
     end
