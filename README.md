@@ -56,7 +56,7 @@ A single "file" importer is currently available. This importer load all the file
 
 The generate stage (see `lib/site/generate.rb`) is intended for us to fetch data back from the database as required, render views, and save the output as static files.
 
-_Right now, at this stage of the proof-of-concept, the logic to generate my site is implemented directly in their `#call` methods of both these build components. Later, I'd like to add some kind of DSL to make it nicer to define the **prepare** and **generate** rules for any given site._
+_Right now, at this stage of the proof-of-concept, the logic to generate my site is implemented directly in the `#call` methods of both these build components. Later, I'll add some kind of DSL to make it nicer to define the **prepare** and **generate** rules for any given site._
 
 ### Views
 
