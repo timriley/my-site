@@ -84,3 +84,7 @@ After musing on static generators for months, I'm really happy with how this one
 - [ ] Add support for working with rom-rb `db/migration/` files, for more complex database schemas
 - [ ] Extract the shareable logic into a gem (TODO: work out how best to do this for dry-system)
 - [ ] Write some stanadalone example sites
+
+## License
+
+All code is MIT licensed. All site content (in `source/`) is copyright Tim Riley, all rights reserved.
