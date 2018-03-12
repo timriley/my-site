@@ -10,6 +10,8 @@ This is my personal website and a proof-of-concept static site generator built u
 
 Run `./bin/setup` to set up the application.
 
+Review `.env` and adjust the settings as required.
+
 ## Building the site
 
 Run `./bin/build` to build the site. This will empty the `build/` directory and then repopulate it with a new copy of the site's files.
