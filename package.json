@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "icelab-assets": "icelab/icelab-assets"
+  },
+  "scripts": {
+    "start": "icelab-assets start --source-path=assets --build-path=build/assets",
+    "build": "icelab-assets build --source-path=assets --build-path=build/assets",
+    "test": "icelab-assets test --source-path=assets --build-path=build/assets",
+    "create-entry": "icelab-assets create-entry"
+  }
+}

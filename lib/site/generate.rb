@@ -24,6 +24,8 @@ module Site
       FileUtils.rm_rf(export_dir, secure: true)
       FileUtils.mkdir_p(export_dir)
 
+      system "yarn run build" or raise "webpack build failed"
+
       render export_dir, "index.html", home_view
       render export_dir, "writing/index.html", writing_view
       render export_dir, "feed.xml", feed_view

@@ -8,5 +8,7 @@ Dir.chdir(APP_ROOT) do
   require "bundler"
   Bundler.setup
 
+  system "yarn"
+
   FileUtils.cp ".env-example", ".env" unless File.exist?(".env")
 end
