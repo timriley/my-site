@@ -4,8 +4,6 @@ Site::Container.boot :database, namespace: true do |site|
     require "rom"
     require "rom/sql"
 
-    use :settings
-
     Sequel.database_timezone = :utc
     Sequel.application_timezone = :local
 
