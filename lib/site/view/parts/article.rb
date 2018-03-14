@@ -20,7 +20,21 @@ module Site
         end
 
         def body_html
-          @body_html ||= CommonMarker.render_html(body)
+          @body_html ||= render_markdown(body)
+        end
+
+        private
+
+        def render_markdown(str)
+          doc = CommonMarker.render_doc(str, [:FOOTNOTES, :SMART])
+
+          doc.walk do |node|
+            if node.type == :image
+              node.url = context.asset_path(node.url)
+            end
+          end
+
+          doc.to_html
         end
       end
     end
