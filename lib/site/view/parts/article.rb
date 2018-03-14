@@ -7,8 +7,12 @@ module Site
   module View
     module Parts
       class Article < Dry::View::Part
+        def absolute_url
+          external_url || "#{context.site_url}/writing/#{permalink}"
+        end
+
         def url
-          external_url || "#{context.site_url}/#{permalink}"
+          external_url || "/writing/#{permalink}"
         end
 
         def display_date

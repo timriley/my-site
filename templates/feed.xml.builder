@@ -12,8 +12,8 @@ xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
   articles.each do |article|
     xml.entry do
       xml.title article.title
-      xml.link "rel" => "alternate", "href" => article.url
-      xml.id article.url
+      xml.link "rel" => "alternate", "href" => article.absolute_url
+      xml.id article.absolute_url
       xml.published article.published_at.iso8601
       xml.updated article.published_at.iso8601
       xml.author do

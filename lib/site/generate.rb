@@ -32,7 +32,7 @@ module Site
       render export_dir, "about/index.html", about_view
 
       article_repo.internal_published.each do |article|
-        render export_dir, "articles/#{article.permalink}/index.html", article_view, article: article
+        render export_dir, "writing/#{article.permalink}/index.html", article_view, article: article
       end
 
       Success(:ok)
