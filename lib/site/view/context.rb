@@ -1,3 +1,4 @@
+require "uri"
 require "dry/core/constants"
 require "forwardable"
 require "site/import"
@@ -28,6 +29,14 @@ module Site
           [@page_title, site_name].compact.join(" | ")
         else
           @page_title = new_title
+        end
+      end
+
+      def asset_path(path)
+        if URI(path).absolute?
+          path
+        else
+          assets[path]
         end
       end
 
