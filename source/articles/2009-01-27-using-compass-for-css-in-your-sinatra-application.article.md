@@ -6,7 +6,7 @@ published_at: 2009-01-27 11:30:00 +0000
 
 Stage left: [Sinatra](http://sinatra.github.com/), the hottest new Ruby DSL for expressive, singular web application development. Stage right: [Compass](http://compass-style.org/), the CSS _metaframework_ that takes the ease of use of [Blueprint](http://www.blueprintcss.org/)'s grids and [Sass](http://haml.hamptoncatlin.com/)' syntax, and lets you combine them in a manner semantic & modular, just how you like it.
 
-[![Sinatra graffiti](squarespace/images/ss/44bfc49ebf79.jpg)](http://www.flickr.com/photos/damonabnormal/2228863689/)
+[![Sinatra graffiti](content/images/ss/44bfc49ebf79.jpg)](http://www.flickr.com/photos/damonabnormal/2228863689/)
 
 Until now, these actors could never meet. With the release of the 0.9 series of Sinatra, however, it has become a _breeze_.
 

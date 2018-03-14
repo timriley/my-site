@@ -8,7 +8,7 @@ published_at: 2010-10-06 23:30:00 +0000
 
 Here's how we've travelled over time. The blue line is our cumulative review count, and the red is the number added each day.
 
- ![Decaf Sucks growth chart](squarespace/images/ss/326e7b8ae55f.png)
+ ![Decaf Sucks growth chart](content/images/ss/326e7b8ae55f.png)
 
 The site has worked amazingly well in its first incarnation. However, with the number of reviews growing, it has become time to make some changes. So, as a first birthday celebration, we recently pushed up a whole swag of improvements to the site. Here is the lowdown:
 
@@ -21,4 +21,4 @@ The site has worked amazingly well in its first incarnation. However, with the n
 
 Go [check it out](http://decafsucks.com/) and [leave a review](http://decafsucks.com/reviews/new)!
 
-[![Decaf Sucks v2 Screenshots](squarespace/images/ss/b1b46181d9bf.png)](http://decafsucks.com/)
+[![Decaf Sucks v2 Screenshots](content/images/ss/b1b46181d9bf.png)](http://decafsucks.com/)

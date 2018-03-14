@@ -6,7 +6,7 @@ published_at: 2010-04-09 04:55:00 +0000
 
 [Capybara](http://github.com/jnicklas/capybara) is a Ruby DSL for easily writing integration tests for Rack applications. It is an alternative to Webrat and can easily replace it as a backend for your [Cucumber](http://cukes.info/) features. Its power and utility lies in that it comes bundled with several different browser simulators, equipping you with a flexible toolkit for testing all parts of your application, from the simplest page to the most complex, JavaScript-heavy page.
 
- [caption id="" align="alignnone" width="500.0"] ![A photo of real capybaras.](squarespace/images/ss/a7d850d3b04c.jpg) A photo of real capybaras.[/caption]
+ [caption id="" align="alignnone" width="500.0"] ![A photo of real capybaras.](content/images/ss/a7d850d3b04c.jpg) A photo of real capybaras.[/caption]
 
 Using Capybara means you can now confidently write your Cucumber features as the first thing to drive the development of your application, regardless of how you plan to implement the feature. Another win for testing!
 

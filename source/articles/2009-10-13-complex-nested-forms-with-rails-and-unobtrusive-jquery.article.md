@@ -10,7 +10,7 @@ The example app works beautifully, but a couple of its approaches didn't match h
 
 - It uses inline JavaScript. The JavaScript triggers and code to dynamically add and remove parts of the form for child objects are mixed in with the rest of my page markup, not in `application.js` or another file dedicated to my JavaScript and behaviour.
 - The JavaScript function to add fields to the form takes a string argument that contains _all_ the HTML markup for these forms. Now, I'm no expert, but this just didn't seem as clean or efficient as possible.
- [caption id="" align="alignnone" width="500.0"] ![Image from carsten_tb.](squarespace/images/ss/6fa184048ecd.jpg) Image from carsten\_tb.[/caption]
+ [caption id="" align="alignnone" width="500.0"] ![Image from carsten_tb.](content/images/ss/6fa184048ecd.jpg) Image from carsten\_tb.[/caption]
 
 So when I incorporated Ryan's examples into my application, I made a couple of changes:
 

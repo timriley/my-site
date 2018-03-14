@@ -8,7 +8,7 @@ published_at: 2009-09-02 06:35:00 +0000
 
 48 hours. 3 hackers ([Max](http://makenosound.com), [Hugh](http://hughevans.net) and [yours truly](http://openmonkey.com/about)), 1 web application built from scratch. Allow me to introduce you to [**Decaf Sucks**](http://decafsucks.com/), our Rails Rumble entry and a site for helping you find great coffee.
 
-[![Screenshot of Decaf Sucks](squarespace/images/ss/5ac1bd7cfb18.jpg)](http://decafsucks.com/)
+[![Screenshot of Decaf Sucks](content/images/ss/5ac1bd7cfb18.jpg)](http://decafsucks.com/)
 
 We hate bad coffee. We hate the way it tastes, the way it smells, and most of all we hate paying for it. Decaf Sucks is about helping each other to find the good cafés and avoid the bad ones.
 

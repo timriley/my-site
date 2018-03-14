@@ -10,7 +10,7 @@ Before long, you'll have more items on your list than you could conceivably do (
 
 Fortunately, TaskPaper offers another feature that will help you manage this problem: its simple single-file, plain-text data format. With TaskPaper, you can spread your to-do lists across multiple files, and have them open them concurrently. This is largely its reason for being, and what sets it apart from the heavier duty task management apps like OmniFocus. The benefit of this single text file is that you can easily move it and rename it, enabling you to shift everything aside and declare _to-do list bankruptcy_.
 
- ![Before and after](squarespace/images/ss/87d043dbcd63.png)
+ ![Before and after](content/images/ss/87d043dbcd63.png)
 
 I've just done this myself, moving my `Things.taskpaper` file to `Archive 2010.taskpaper`. Bam: instant clean slate. Create a brand new `Things` file in its place, copy across a select few important tasks, and you're ready to go. You can even keep your archived to-do lists in your synced [SimpleText](http://www.hogbaysoftware.com/products/simpletext) folder, so they remain accessible for reference on your iPhone as well as your Mac (There's nothing wrong with a security blanket if it doesn't get in the way).
 

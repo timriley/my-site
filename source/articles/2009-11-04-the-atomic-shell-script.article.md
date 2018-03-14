@@ -6,7 +6,7 @@ published_at: 2009-11-04 06:25:00 +0000
 
 The single file is the fundamental building block of unix and the smallest unit that you work with when configuring servers. So, when scripting your repetitive server tasks, keeping your code contained within a similarly singular, atomic file is a worthy goal for the simplicity and convenience that it brings. A way to achieve this for complex scripts may not always be immediately clear, but it usually both possible and worth the effort.
 
- [caption id="" align="alignnone" width="500.0"] ![Image from freakdog.](squarespace/images/ss/163643b2426d.jpg) Image from freakdog.[/caption]
+ [caption id="" align="alignnone" width="500.0"] ![Image from freakdog.](content/images/ss/163643b2426d.jpg) Image from freakdog.[/caption]
 
 Here's my example. When we started using [request-log-analyzer](http://github.com/wvanbergen/request-log-analyzer/) to periodically analyse the logs from one of our Rails apps, it looked like I would need to use multiple files:
 

@@ -8,7 +8,7 @@ As I write this, I look over Hollywood Road and watch the antique stores close d
 
 Time has really flown by since my wife and I [finished in the Philippines](http://openmonkey.com/blog/2011/11/03/moving-to-the-philippines/) and came back to chilly Australia at the end of June. We spent a whirlwind seven weeks catching up with friends and work, and now we've already started the next chapter of our overseas adventures: two months in Hong Kong.
 
- ![Map of Hong Kong](squarespace/images/ss/7441ce33f781.png)
+ ![Map of Hong Kong](content/images/ss/7441ce33f781.png)
 
 Why Hong Kong? We've visited a couple of times and have really enjoyed it here, and after eight months in the provincial Philippines, it would be fun to experience the opposite end of the urban spectrum. Working remotely for [Icelab](http://icelab.com.au/) has been no trouble, so we can go where our fancies take us.
 

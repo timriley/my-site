@@ -8,7 +8,7 @@ _The code examples in this article were extracted from [Tim Lucas](http://toolma
 
 One of the most rewarding things I've found while playing with [Sinatra](http://www.sinatrarb.com/) so far it encourages me to learn more about the implementation of the underlying mechanics of a modern web application. This is a framework that doesn't coddle you: the things that you get for free in [Rails](http://rubyonrails.com/) and the other larger web frameworks are nowhere to be seen. What's left is lean & mean, and ready to be shaped into whatever form you fancy!
 
-[![Expiry stamp](squarespace/images/ss/54b06666e12f.jpg)](http://www.flickr.com/photos/tartanna/52648670/)
+[![Expiry stamp](content/images/ss/54b06666e12f.jpg)](http://www.flickr.com/photos/tartanna/52648670/)
 
 So let's talk about stylesheets and javascript files. These are assets that don't change as often as the pages in your web app. Your javascript files are more than likely to be served directly from the filesystem. Your stylesheets may also be static files, but Sinatra also provides excellent support for generating CSS from Sass templates.
 

@@ -10,7 +10,7 @@ This is especially the case if you use a portable computer that isn't always hoo
 
 Here's the solution that has worked for me: configure a SuperDuper backup schedule that commences whenever your external disk is connected, and finishes by putting your Mac to sleep:
 
- ![SuperDuper](squarespace/images/ss/f1261aa894fb.png)
+ ![SuperDuper](content/images/ss/f1261aa894fb.png)
 
 My MacBook usually gets opened over the course of a normal evening at home. My rule is that the only way I can put it to sleep for the night is by connecting my backup drive and triggering the SuperDuper backup. It's fast and simple; connecting a single cable to the USB port is no bother at all. The backup runs and then my Mac goes to sleep, and it means I can sleep easier too, with my data better protected.
 

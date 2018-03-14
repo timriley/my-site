@@ -102,7 +102,7 @@ end
 
 To extract some of the common patterns from the above deploy script, we'll need to create a heirarchy of files that we'll eventually turn into our gem. Here's how it should look:
 
- ![Capistrano gem structure](squarespace/images/ss/4771b5db9900.png)
+ ![Capistrano gem structure](content/images/ss/4771b5db9900.png)
 ## Capistrano Boilerplate
 
 You'll need something like the following wrapped around any Capistrano code that you use in your gem.
