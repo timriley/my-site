@@ -1,11 +1,19 @@
 {
-  "devDependencies": {
-    "icelab-assets": "icelab/icelab-assets"
-  },
+  "private": true,
   "scripts": {
-    "start": "icelab-assets start --source-path=assets --build-path=build/assets",
-    "build": "icelab-assets build --source-path=assets --build-path=build/assets",
-    "test": "icelab-assets test --source-path=assets --build-path=build/assets",
-    "create-entry": "icelab-assets create-entry"
+    "start": "node_modules/webpack/bin/webpack.js --watch --progress --hide-modules",
+    "dev": "node_modules/webpack/bin/webpack.js --mode=development --progress --hide-modules",
+    "build": "node_modules/webpack/bin/webpack.js --mode=production --no-progress --hide-modules"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "mini-css-extract-plugin": "^0.2.0",
+    "postcss": "^6.0.20",
+    "postcss-loader": "^2.1.2",
+    "style-loader": "^0.20.3",
+    "tailwindcss": "^0.5.1",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
   }
 }

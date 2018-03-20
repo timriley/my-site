@@ -1,3 +1,0 @@
-/**
- * Start writing JS!
- */
