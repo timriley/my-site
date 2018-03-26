@@ -11,13 +11,13 @@ module.exports = function(env, argv) {
       content: './assets/content.js',
     },
     output: {
-      filename: '[name].js',
+      filename: '[name].[hash:8].js',
       path: __dirname + '/build/assets',
     },
     plugins: [
       new ManifestPlugin(),
       new MiniCssExtractPlugin({
-        filename: "[name].css",
+        filename: "[name].[hash:8].css",
         chunkFilename: "[id].css"
       })
     ],
