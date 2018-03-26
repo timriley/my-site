@@ -1,4 +1,5 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ManifestPlugin = require("webpack-manifest-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = function(env, argv) {
   return {
@@ -14,6 +15,7 @@ module.exports = function(env, argv) {
       path: __dirname + '/build/assets',
     },
     plugins: [
+      new ManifestPlugin(),
       new MiniCssExtractPlugin({
         filename: "[name].css",
         chunkFilename: "[id].css"
