@@ -1,5 +1,4 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const path = require('path')
 
 module.exports = function(env, argv) {
   return {
@@ -13,7 +12,6 @@ module.exports = function(env, argv) {
     output: {
       filename: '[name].js',
       path: __dirname + '/build/assets',
-      // path: path.resolve(__dirname, 'build/assets'),
     },
     plugins: [
       new MiniCssExtractPlugin({
