@@ -79,10 +79,10 @@ Extending the application doesn't require any special framework plugins or monke
 After musing on static generators for months, I'm really happy with how this one is shaping up. There's still more to do before it can be used for other sites, though. Here's my working list:
 
 - [x] Integrate with Webpack-managed assets for site CSS/JS
-- [ ] Handle webpack build outside of `generate` operation
+- [x] Handle webpack build outside of `generate` operation
 - [ ] Document deployment options
 - [ ] Demonstrate easy of testing by adding unit & integration tests for my site's specific behaviors
-- [ ] Return something more meaningful from operations than `Success(:ok)`
+- [ ] Return something more meaningful from operations than `Success(root)`
 - [ ] Displayer nicer output during prepare/generate
 - [ ] Write a DSL for more expressively defining rules for the prepare/generate build stages
 - [ ] Make another example of an importer
