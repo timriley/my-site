@@ -30,8 +30,10 @@ module Site
         render export_dir, "writing/#{article.permalink}/index.html", article_view, article: article
       end
 
-      Success(:ok)
+      Success(root)
     end
+
+    private
 
     def render(export_dir, path, view, **input)
       context = view.class.config.context.new(current_path: path.sub(%r{/index.html$}, ""))

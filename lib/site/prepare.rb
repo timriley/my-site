@@ -14,7 +14,7 @@ module Site
 
     def call(root)
       import_files.(File.join(root, settings.import_dir))
-      Success(:ok)
+      Success(root)
     end
   end
 end
