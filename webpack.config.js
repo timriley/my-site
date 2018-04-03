@@ -43,7 +43,8 @@ module.exports = function(env, argv) {
             {
               loader: 'file-loader',
               options: {
-                name: '[path][name].[hash:8].[ext]',
+                name: '[name].[hash:8].[ext]',
+                useRelativePath: true,
               },
             },
           ],
