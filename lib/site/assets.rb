@@ -35,7 +35,7 @@ module Site
       end
 
       def manifest_path
-        "#{root}/#{ASSETS_DIR}/asset-manifest.json"
+        "#{root}/#{ASSETS_DIR}/manifest.json"
       end
     end
 
