@@ -18,4 +18,7 @@ gem "transproc"
 
 group :development, :test do
   gem "byebug"
+  gem "foreman"
+  gem "guard"
+  gem "guard-shell"
 end

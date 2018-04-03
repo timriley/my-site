@@ -1,0 +1,3 @@
+guard: bundle exec guard --no-notify --no-interactions
+webpack: yarn run start
+web: ruby -run -e httpd ./build -p 8000
