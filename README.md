@@ -81,9 +81,9 @@ After musing on static generators for months, I'm really happy with how this one
 - [x] Integrate with Webpack-managed assets for site CSS/JS
 - [x] Handle webpack build outside of `generate` operation
 - [ ] Document deployment options
-- [ ] Demonstrate easy of testing by adding unit & integration tests for my site's specific behaviors
+- [ ] Demonstrate ease of testing by adding unit & integration tests for my site's specific behaviors
 - [ ] Return something more meaningful from operations than `Success(root)`
-- [ ] Displayer nicer output during prepare/generate
+- [ ] Display nicer output during prepare/generate
 - [ ] Write a DSL for more expressively defining rules for the prepare/generate build stages
 - [ ] Make another example of an importer
 - [ ] Add support for working with rom-rb `db/migration/` files, for more complex database schemas
