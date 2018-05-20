@@ -1,19 +1,151 @@
 html
   head
     link rel="stylesheet" type="text/css" href=asset_path("site.css")
+    meta charset="utf-8"
     title = page_title
-  body
-    h1 Tim Riley
-    nav
-      ul
-        li
-          a class=("current" if current_path == "home") href="/"
-            | Home
-        li
-          a class=("current" if current_path == "writing" || current_path =~ /^articles/) href="/writing"
-            | Writing
-        li
-          a class=("current" if current_path == "about") href="/about"
-            | About
+  body style="font-family: -apple-system"
+    .flex.flex-wrap.max-w-2xl.mx-auto.mt-8.mb-8
+      div class="self-end w-full ml-8 md:ml-0 mr-8 md:mr-0 md:pr-3 md:w-1/6 md:text-right text-grey font-mono text-xs mb-px"
+        | timriley.info
+      div.self-end class="w-full ml-8 md:ml-0 mr-8 md:mr-0 md:w-2/3"
+        nav
+          ul.list-reset.flex
+            li.mr-2
+              a.no-underline href="/writing"
+                | /writing
+            li
+              a.no-underline href="/about"
+                | /about
+    div class="flex flex-wrap max-w-2xl md:mx-auto mt-8"
+      div class="w-full md:w-1/6"
+      div class="w-full ml-8 md:ml-0 mr-8 md:mr-0 md:w-2/3"
+        h1.text-3xl.font-black.mb-6
+          ' Tim Riley
+          | is a software developer from Canberra,&nbsp;Australia.
 
-    == yield
+        .text-xl.font-serif.leading-normal.mb-6
+          ' Tim is a partner at <a href="#">Icelab</a>, and a
+          ' core developer of <a href="#">dry-rb</a> and
+          ' <a href="#">rom-rb</a>.
+          ' He's excited by small libraries, first-class functions,
+          ' and pushing forward web app development with Ruby.
+
+        h2.mb-3
+          | Writing
+
+        div.mb-3
+
+          a.font-bold.text-black.no-underline href="#"
+            | 2016 in review
+            time.font-mono.text-xs.text-grey.inline-block.ml-2.font-normal
+              | 2013/12/12
+        div.mb-3
+          a.font-bold.text-black.no-underline href="#"
+            | Our Problem with Boxen
+            time.font-mono.text-xs.text-grey.inline-block.ml-2.font-normal
+              | 2013/12/12
+        div.mb-3
+          a.font-bold.text-black.no-underline href="#"
+            | New Podcasts
+            time.font-mono.text-xs.text-grey.inline-block.ml-2.font-normal
+              | 2013/12/12
+
+        / div.mb-3
+        /   a.block.mb-1.font-bold.text-black.no-underline href="#"
+        /     | 2016 in review
+        /   time.block.text-grey-dark
+        /     | 12 December 2013
+        / div.mb-3
+        /   a.block.mb-1.font-bold.text-black.no-underline href="#"
+        /     | New podcasts
+        /   time.block.text-grey-dark
+        /     | 12 December 2013
+        / div.mb-3
+        /   a.block.mb-1.font-bold.text-black.no-underline href="#"
+        /     | Our Problem with Boxen
+        /   time.block.text-grey-dark
+        /     | 12 December 2013
+        / div.mb-3
+        /   a.block.mb-1.font-bold.text-black.no-underline href="#"
+        /     | Decaf Sucks 2: A New Old Design
+        /   time.block.text-grey-dark
+        /     | 12 December 2013
+        / div.mb-3
+        /   a.block.mb-1.font-bold.text-black.no-underline href="#"
+        /     | Decaf Sucks 2: Starting Over
+        /   time.block.text-grey-dark
+        /     | 12 December 2013
+        / div.mb-3
+        /   a.block.mb-1.font-bold.text-black.no-underline href="#"
+        /     | Decaf Sucks 2 Is Coming, 2 Hours at a Time
+        /   time.block.text-grey-dark
+        /     | 12 December 2013
+
+
+
+
+
+
+
+
+
+
+
+
+
+    / .max-w-lg.mx-auto.mt-8
+    /   / == yield
+    /   nav
+    /     ul.list-reset.flex.mb-8
+    /       li.mr-2
+    /         a href="/"
+    /           | timriley.info
+    /       li.mr-2
+    /         a href="/writing"
+    /           | Writing
+    /       li
+    /         a href="/about"
+    /           | About
+
+    /   h1.text-3xl.font-black.mb-6
+    /     ' Tim Riley
+    /     | is a software developer from Canberra,&nbsp;Australia.
+
+    /   p.text-xl.font-serif.leading-normal
+    /     ' Tim is a partner at <a href="#">Icelab</a>, and a
+    /     ' core developer of <a href="#">dry-rb</a> and
+    /     ' <a href="#">rom-rb</a>.
+    /     ' He's excited by small libraries, first-class functions,
+    /     ' and pushing forward web app development with Ruby.
+
+    /   h2 Writing
+
+
+
+
+
+
+/ OK examples
+/
+/ .max-w-md.mx-auto.pt-8
+/   / h1.inline-block.text-4xl.p-2.-ml-2.mb-8.bg-teal-dark.text-teal-lightest
+/   /   | Tim Riley
+/   / h1.text-md.pl-2.pr-2.-ml-2.-mr-2.font-black.text-teal-dark
+/   /   | Tim Riley
+/   /hr.border-b.border-red.-mt-2.-ml-2.-mr-2.rounded
+/   == yield
+
+/ h1
+      /   /.p-1.pl-6.pr-6
+      /   span.bg-teal-dark Tim Riley
+
+        / ul.list-reset.flex.justify-center.items-end
+        /   li.m-2
+        /     a class=("current" if current_path == "home") href="/"
+        /       | Home
+        /   li.m-2
+        /     a class=("current" if current_path == "writing" || current_path =~ /^articles/) href="/writing"
+        /       | Writing
+        /   li.m-2
+        /     a class=("current" if current_path == "about") href="/about"
+        /       | About
