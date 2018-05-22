@@ -16,7 +16,7 @@ module Site
         end
 
         def display_date
-          published_at.strftime("%-m %B %Y")
+          published_at.strftime("%Y/%m/%d")
         end
 
         def body_html

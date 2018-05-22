@@ -1,2 +1,24 @@
-p
-  | Tim Riley is a partner at Australian design agency Icelab, and a core developer of dry-rb. He's excited by small libraries, first-class functions, and pushing forward web app development with Ruby.
+h1.text-3xl.font-black.mb-6 style="font-family: -apple-system"
+  span> class="inline-block rounded bg-pink-lightest p-px pl-1 -ml-1 pr-1" Tim Riley
+  | is a software developer from Canberra,&nbsp;Australia.
+
+.text-xl.font-serif.leading-normal.mb-8
+  ' Tim is a partner at <a href="#">Icelab</a>, and a
+  ' core developer of <a href="#">dry-rb</a> and
+  ' <a href="#">rom-rb</a>.
+  ' He's excited by small libraries, first-class functions,
+  ' and pushing forward web app development with Ruby.
+
+h2.mb-6.text-pink-dark
+  a class="hover:no-underline" href="/writing"
+    | Recent writing
+
+- articles.each do |article|
+  div.mb-6
+    a class="block mb-1 font-bold text-lg text-black hover:text-pink hover:no-underline" href=article.url
+      = article.title
+    time.block.font-mono.text-xs.text-grey.inline-block.font-normal
+      = article.display_date
+
+.mb-6
+  a class="font-mono text-sm text-black font-bold hover:text-pink hover:no-underline" href="/writing"

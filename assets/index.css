@@ -23,6 +23,13 @@
  * .form-input { ... }
  */
 
+a {
+  @apply .no-underline .text-pink;
+}
+a:hover {
+  @apply .underline;
+}
+
 /**
  * This injects all of Tailwind's utility classes, generated based on your
  * config file.
