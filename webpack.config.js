@@ -8,7 +8,8 @@ module.exports = function(env, argv) {
         './assets/index.js',
         './assets/index.css',
       ],
-      content: './assets/content.js',
+      // Don't process site content for now
+      // content: './assets/content.js',
     },
     output: {
       filename: '[name].[hash:8].js',

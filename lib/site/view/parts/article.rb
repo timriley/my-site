@@ -30,7 +30,8 @@ module Site
 
           doc.walk do |node|
             if node.type == :image
-              node.url = context.asset_path(node.url)
+              # node.url = context.asset_path(node.url)
+              node.url = "/assets/#{node.url}"
             end
           end
 
