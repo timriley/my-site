@@ -23,11 +23,39 @@
  * .form-input { ... }
  */
 
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
 a {
   @apply .no-underline .text-pink;
 }
 a:hover {
   @apply .underline;
+}
+
+.copy {
+  @apply .text-lg;
+}
+
+.copy p {
+  @apply .mb-6 .leading-normal;
+}
+
+.copy ul, .copy ol {
+  @apply .mb-6;
+}
+
+.copy li {
+  @apply .mb-2 .leading-normal;
+}
+
+.copy h2 {
+  @apply .mb-3;
+}
+
+.copy h1, .copy h2, .copy h3, .copy h4, .copy h5, .copy h6 {
+  @apply .text-pink;
 }
 
 /**
