@@ -1,5 +1,9 @@
 - page_title article.title
 
-h1 = article.title
+h1.text-3xl.font-extrabold.mb-1 style="text-color: #222"
+  = article.title
+time.block.mb-6.font-mono.text-xs.text-grey.inline-block.font-normal
+  = article.display_date
 
-== article.body_html
+.copy
+  == article.body_html
