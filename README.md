@@ -92,4 +92,4 @@ After musing on static generators for months, I'm really happy with how this one
 
 ## License
 
-All code is MIT licensed. All site content (in `source/`) is copyright Tim Riley, all rights reserved.
+All code is MIT licensed. All site content (in `assets/` and `source/`) is copyright Tim Riley, all rights reserved.
