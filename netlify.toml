@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/archive"
+  to = "/writing"
+
+[[redirects]]
+  from = "/blog"
+  query = {format: ":format"} # catch "?format=RSS"
+  to = "/feed.xml"
+  status = 301
