@@ -1,8 +1,9 @@
 html
   head
-    link rel="stylesheet" type="text/css" href=asset_path("site.css")
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
+    link rel="alternate" type="application/rss+xml" title="RSS Feed" href="#{site_url}/feed.xml"
+    link rel="stylesheet" type="text/css" href=asset_path("site.css")
     title = page_title
   body
     .flex.flex-wrap.max-w-xl.mx-auto.mt-8.mb-8
