@@ -58,6 +58,10 @@ a:hover {
   @apply .text-pink;
 }
 
+.copy pre {
+  @apply .mb-6 .overflow-scroll;
+}
+
 /**
  * This injects all of Tailwind's utility classes, generated based on your
  * config file.
