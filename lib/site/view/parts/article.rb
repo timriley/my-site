@@ -1,5 +1,6 @@
 # auto_register: false
 
+require "time"
 require "dry/view/part"
 require "commonmarker"
 
@@ -17,6 +18,10 @@ module Site
 
         def display_date
           published_at.strftime("%Y/%m/%d")
+        end
+
+        def datetime_code
+          published_at.utc.iso8601
         end
 
         def body_html
