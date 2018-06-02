@@ -1,6 +1,7 @@
 # auto_register: false
 
 require "time"
+require "uri"
 require "dry/view/part"
 require "commonmarker"
 
@@ -14,6 +15,11 @@ module Site
 
         def url
           external_url || "/writing/#{permalink}"
+        end
+
+        def external_url_domain
+          return unless external?
+          URI(external_url).host
         end
 
         def display_date
