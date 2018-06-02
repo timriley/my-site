@@ -38,6 +38,11 @@ a:hover {
   @apply .text-lg;
 }
 
+.copy blockquote {
+  @apply .ml-6 .mb-6;
+  font-style: italic;
+}
+
 .copy p {
   @apply .mb-6 .leading-normal;
 }
