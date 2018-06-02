@@ -26,3 +26,9 @@ html
       div class="w-full ml-8 md:ml-0 mr-8 md:mr-0 md:w-1/6"
       div class="w-full ml-8 md:ml-0 mr-8 md:mr-0 md:w-2/3"
         == yield
+
+    div class="flex flex-wrap max-w-xl md:mx-auto mt-8 mb-8"
+      div class="w-full ml-8 md:ml-0 mr-8 md:mr-0 md:w-1/6"
+      div class="w-full ml-8 md:ml-0 mr-8 md:mr-0 md:w-2/3 text-grey font-mono text-xs"
+        | &copy; 2008-#{Time.now.year} Tim Riley. All rights reserved.
+
