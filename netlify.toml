@@ -4,6 +4,6 @@
 
 [[redirects]]
   from = "/blog"
-  query = {format: ":format"} # catch "?format=RSS"
+  query = {format = ":format"} # catch "?format=RSS"
   to = "/feed.xml"
   status = 301
