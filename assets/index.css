@@ -42,6 +42,10 @@ a:hover {
   @apply .mb-6 .leading-normal;
 }
 
+.copy p:last-child {
+  @apply .mb-0;
+}
+
 .copy ul, .copy ol {
   @apply .mb-6;
 }
