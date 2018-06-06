@@ -19,7 +19,7 @@ module Site
 
         def external_url_domain
           return unless external?
-          URI(external_url).host
+          URI(external_url).host.sub(/^www\./, "")
         end
 
         def display_date
