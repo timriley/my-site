@@ -15,11 +15,11 @@
   status = 301
 
 [[redirects]]
-  from = "https://openmonkey.com/*"
-  to = "https://timriley.info/:splat"
+  from = "https://openmonkey.com*"
+  to = "https://timriley.info:splat"
   status = 301
 
 [[redirects]]
-  from = "https://www.openmonkey.com/*"
-  to = "https://timriley.info/:splat"
+  from = "https://www.openmonkey.com*"
+  to = "https://timriley.info:splat"
   status = 301
