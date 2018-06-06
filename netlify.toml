@@ -1,9 +1,25 @@
 [[redirects]]
   from = "/archive"
   to = "/writing"
+  status = 301
 
 [[redirects]]
   from = "/blog"
   query = {format = ":format"} # catch "?format=RSS"
   to = "/feed.xml"
+  status = 301
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/writing/:splat"
+  status = 301
+
+[[redirects]]
+  from = "http://openmonkey.com/*"
+  to = "https://timriley.info/:splat"
+  status = 301
+
+[[redirects]]
+  from = "http://www.openmonkey.com/*"
+  to = "https://timriley.info/:splat"
   status = 301
