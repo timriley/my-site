@@ -10,12 +10,13 @@ module Site
     include Import[
       "settings",
       "repos.article_repo",
-      export: "exporters.files",
-      home_view: "views.home",
-      writing_view: "views.writing",
-      feed_view: "views.feed",
       about_view: "views.about",
       article_view: "views.article",
+      export: "exporters.files",
+      feed_view: "views.feed",
+      home_view: "views.home",
+      speaking_view: "views.speaking",
+      writing_view: "views.writing",
     ]
 
     def call(root)
@@ -26,6 +27,7 @@ module Site
       render export_dir, "index.html", home_view
       render export_dir, "writing/index.html", writing_view
       render export_dir, "feed.xml", feed_view
+      render export_dir, "speaking/index.html", speaking_view
       render export_dir, "about/index.html", about_view
 
       article_repo.internal_published.each do |article|

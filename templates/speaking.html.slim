@@ -1,0 +1,31 @@
+- page_title "Speaking"
+
+h2.mb-6.text-pink-dark
+  | Speaking
+
+/ .copy
+/   p Blah blah speaking blah
+
+/ h3.mb-6.text-pink-dark
+/   | Talks
+
+- talks.each do |talk|
+  div.mb-6
+    div class="mb-1 font-bold text-base text-black"
+      = talk.title
+
+    div class="mb-1 text-sm text-black"
+      | #{talk.event}, #{talk.location}
+
+    div class="font-mono text-xs text-grey"
+      /datetime=article.datetime_code
+      time = talk.date.strftime("%b %Y")
+
+    / div class="font-mono text-xs text-grey"
+    /   time datetime=article.datetime_code = article.display_date
+
+    / div class="font-mono text-xs text-grey"
+    /   time datetime=article.datetime_code = article.display_date
+    /   - if article.external?
+    /     '  -
+    /     = article.external_url_domain
