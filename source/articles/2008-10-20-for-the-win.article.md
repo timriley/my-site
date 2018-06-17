@@ -6,7 +6,7 @@ published_at: 2008-10-20 10:20:00 +0000
 
 In the last 48 hours, two friends and colleagues and I laboured over a brand new web app, for our entry in this year's&nbsp;[Rails Rumble](http://railsrumble.com/ "Rails Rumble"). The result is something we're proud to share with you:&nbsp;**[Ideas FTW!](http://ideasftw.com/ "Ideas FTW")**.
 
- ![Ideas FTW!](content/images/ss/a6eea9536481.jpg)
+![Ideas FTW!](content/images/ss/a6eea9536481.jpg)
 
 We all have plenty of ideas, most of which we never have the opportunity to act on. Ideas FTW is an idea _incubator_ that allows you to see your ideas come to life. You can vote on ideas, post your own, take up an idea and start an effort to achieve it on your own or in a group.
 
