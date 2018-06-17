@@ -1,6 +1,8 @@
 ---
 title: Functional Architecture for the Practical Rubyist
+url: https://www.icelab.com.au/notes/tim-talks-functional-architecture-at-reddotrubyconf
 event: RedDotRubyConf
+event_url: http://rdrc2017.herokuapp.com
 location: Singapore
 date: 2017-06-22
 ---

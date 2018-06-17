@@ -5,7 +5,9 @@ module Database
         attribute :id, Types::Serial
         attribute :path, Types::String
         attribute :title, Types::String
+        attribute :url, Types::String.optional
         attribute :event, Types::String
+        attribute :event_url, Types::String.optional
         attribute :location, Types::String
         attribute :date, Types::Time
         attribute :body, Types::String
