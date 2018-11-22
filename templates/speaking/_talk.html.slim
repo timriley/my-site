@@ -1,0 +1,27 @@
+div.mb-6
+  - if talk.url
+    a class="inline-block mb-1 font-bold text-base text-black hover:text-pink hover:no-underline" href=talk.url
+      | #{talk.title}&nbsp;→
+  - else
+    div class="mb-1 font-bold text-base text-black"
+      = talk.title
+
+  div class="mb-1 text-sm text-black"
+    - if talk.event_url
+      a class="text-black hover:text-pink" href=talk.event_url = talk.event
+    - else
+      = talk.event
+    | , #{talk.location}
+
+  div class="font-mono text-xs text-grey"
+    /datetime=article.datetime_code
+    time = talk.date.strftime("%b %Y")
+
+  / div class="font-mono text-xs text-grey"
+  /   time datetime=article.datetime_code = article.display_date
+
+  / div class="font-mono text-xs text-grey"
+  /   time datetime=article.datetime_code = article.display_date
+  /   - if article.external?
+  /     '  -
+  /     = article.external_url_domain

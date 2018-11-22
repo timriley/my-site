@@ -11,7 +11,17 @@ module Site
         config.template = "speaking"
       end
 
-      expose :talks, as: View::Parts::Talk do
+      expose :upcoming_talks, as: View::Parts::Talk do |talks|
+        talks.select { |talk| talk.date > Time.now }
+      end
+
+      expose :past_talks, as: View::Parts::Talk do |talks|
+        talks.select { |talk| talk.date < Time.now }
+      end
+
+      private
+
+      private_expose def talks
         talk_repo.all
       end
     end

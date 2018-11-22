@@ -7,34 +7,14 @@ h2.mb-6.text-pink-dark
   p I relish the chance to share the things that are are making a difference in my life as a software developer: better application architecture and continuing innovation in Ruby.
   p I’d love to do this more. I’m available for speaking opportunities in 2019. Please <a href="/about">get in touch</a>.
 
-h3.mb-6.text-pink-dark
-  | Past talks
+- if upcoming_talks.any?
+  h3.mb-6.text-pink-dark
+    | Upcoming talks
+  - upcoming_talks.each do |talk|
+    == talk.render(:talk, as: :talk)
 
-- talks.each do |talk|
-  div.mb-6
-    - if talk.url
-      a class="inline-block mb-1 font-bold text-base text-black hover:text-pink hover:no-underline" href=talk.url
-        | #{talk.title}&nbsp;→
-    - else
-      div class="mb-1 font-bold text-base text-black"
-        = talk.title
-
-    div class="mb-1 text-sm text-black"
-      - if talk.event_url
-        a class="text-black hover:text-pink" href=talk.event_url = talk.event
-      - else
-        = talk.event
-      | , #{talk.location}
-
-    div class="font-mono text-xs text-grey"
-      /datetime=article.datetime_code
-      time = talk.date.strftime("%b %Y")
-
-    / div class="font-mono text-xs text-grey"
-    /   time datetime=article.datetime_code = article.display_date
-
-    / div class="font-mono text-xs text-grey"
-    /   time datetime=article.datetime_code = article.display_date
-    /   - if article.external?
-    /     '  -
-    /     = article.external_url_domain
+- if past_talks.any?
+  h3.mb-6.text-pink-dark
+    | Past talks
+  - past_talks.each do |talk|
+    == talk.render(:talk, as: :talk)
