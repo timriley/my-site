@@ -1,6 +1,7 @@
 ---
 title: Views, from the top
 event: RubyConf AU
+url: https://youtu.be/VGWt1OLFzdU
 event_url: https://rubyconf.org.au/2019
 location: Melbourne
 date: 2019-02-07
