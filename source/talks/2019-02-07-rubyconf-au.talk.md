@@ -1,7 +1,7 @@
 ---
 title: Views, from the top
 event: RubyConf AU
-url: https://youtu.be/VGWt1OLFzdU
+url: https://www.icelab.com.au/notes/tim-talks-views-from-the-top
 event_url: https://rubyconf.org.au/2019
 location: Melbourne
 date: 2019-02-07
