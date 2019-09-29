@@ -1,5 +1,5 @@
 ---
-title: Reinvesting in Ruby
+title: Reinvesting in Ruby (Keynote)
 event: Deccan RubyConf
 event_url: http://2017.deccanrubyconf.org
 location: Pune

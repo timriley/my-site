@@ -1,5 +1,5 @@
 ---
-title: Reinvesting in Ruby
+title: Reinvesting in Ruby (Keynote)
 url: https://www.icelab.com.au/notes/icelab-talks-at-rubyconf-au-2017
 event: RubyConf AU
 event_url: https://rubyconf.org.au/2017
