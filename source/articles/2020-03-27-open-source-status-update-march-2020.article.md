@@ -4,7 +4,7 @@ permalink: 2020/03/27/open-source-status-update-march-2020
 published_at: 2020-03-27 22:48:00 +1100
 ---
 
-Inspired by Piotr’s [open source status update][piotr], I thought I’d begin a similar practice (and get back into the swing of blogging, since thie year’s effectively a write-off for in-person meetings).
+Inspired by Piotr’s [open source status update][piotr], I thought I’d begin a similar practice (and get back into the swing of blogging, since this year’s effectively a write-off for in-person meetings).
 
 I hope to do this monthly, but since this is the first one, let me recap the whole of the last year or so! Here are the highlights:
 
@@ -23,7 +23,7 @@ Not much happened after that. I needed a bit of time to recover from my usual in
 
 Later in 2019 I spent a while refining _Snowflakes_, the ersatz framework we developed at Icelab for our own dry-rb/rom-rb/roda-based applications. Most of my work was about enshrining an application/sub-application structure and reducing the amount of boilerplate required for dry-system to provide this.
 
-This turned out to be a prescient effort, because I was able to pivot this approach into the [application and sliaces structure][hanami-application-pr] that will form the core of the Hanami framework for its upcoming 2.0 release.
+This turned out to be a prescient effort, because I was able to pivot this approach into the [application and slices structure][hanami-application-pr] that will form the core of the Hanami framework for its upcoming 2.0 release.
 
 Working on this was a supremely rewarding experience, because it represented a true meeting of the minds between Luca, me, and the other dry-rb team members. We each brought our own experiences to bear on this problem, and through a good amount of back and forth and give and take, we found a way to make what I think will both be a convenient, low-ceremony framework structure that at the same time remains extremely powerful, flexible, and cleanly structured.
 
