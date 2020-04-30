@@ -91,7 +91,7 @@ I also [stumbled across and fixed](https://github.com/hanami/hanami/pull/1046) a
 One more thing: I was glad to have the opportunity to bring several elements of Icelab’s former shared development environment into our new Culture Amp team:
 
 * Our [shared dotfiles](https://github.com/cultureamp/web-team-dotfiles)
-* Our [Homebrew commands tap](https://github.com/cultureamp/homebrew-web-team-devtools), which includes `bootstrap-developer-system` to install the development environment, including the dotfiles, and `bootstrap-asdf`, which takes care of some of the
+* Our [Homebrew commands tap](https://github.com/cultureamp/homebrew-web-team-devtools), which includes `bootstrap-developer-system` to install the development environment, including the dotfiles, and `bootstrap-asdf`, which takes care of installing the range of asdf-managed tools we use (including the finnicky verification of the nodejs package signatures)
 * And our [scripts to rule them all](https://github.com/cultureamp/web-team-scripts-to-rule-them-all), which implements the normalized script pattern for every one of our apps, making it possible for the app to install
 
 After a decade of trying various shared development environments, and now working with this approach for the last couple of years, I’m still incredibly happy with this combo: it’s very light touch and the components are all very simple, making the whole thing a breeze to maintain. I’m happy it can live on and continue serve our team within a new company!
