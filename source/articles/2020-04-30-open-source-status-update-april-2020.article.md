@@ -82,11 +82,7 @@ The work so far (which is messy, be warned!) is spread across PRs in both [hanam
 
 **Various Hanami things: CLI env handling, dotenv improvements, middleware fix**
 
-Last week I also [made some small fixes and tweaks](https://github.com/hanami/hanami/pull/1045) to the nascent Hanami 2 CLI:
-
-I made it so the application boot process triggered via CLI actions was deferred late enough such that the `-e` flag (to set the `HANAMI_ENV`) is properly respected (important if you want to migrate your _actual_ test database!).
-
-Related to this, I expanded the range of files we load via Dotenv for application settings, so you can have you `.env.test` and <del>eat it too</del> have it actually respected when running CLI commands with `-e test`.
+Last week I also [made some small fixes and tweaks](https://github.com/hanami/hanami/pull/1045) to the nascent Hanami 2 CLI: I made it so the application boot process triggered via CLI actions was deferred late enough such that the `-e` flag (to set the `HANAMI_ENV`) is properly respected (important if you want to migrate your _actual_ test database!). Related, I expanded the range of files we load via Dotenv for application settings, so you can have your `.env.test` and <del>eat it too</del> have it actually respected when running CLI commands with `-e test`.
 
 I also [stumbled across and fixed](https://github.com/hanami/hanami/pull/1046) a bug that prevented Rack middlewares from being mounted in the Hanami router if their `#initialize` accepted only a single `app` arg. This is why it’s good to have a real everyday app running on in-progress frameworks like this; such things get noticed and fixed much more quickly!
 
