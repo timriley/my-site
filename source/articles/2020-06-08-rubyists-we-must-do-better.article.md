@@ -20,7 +20,9 @@ This was online bullying, pure and simple. And online bullying kills. **There is
 
 Bozhidar eventually [locked the issue][rubocop-issue-locked], but as RuboCop lead, he’s yet to make any statement about the behaviour of some of those who spoke in “support” of him (I’m sure he has a lot going on, and I’ve reached out to him about this privately).
 
-In the meantime, let me speak this, as one representative of the Ruby community: **There is no place for this vitriol here. This behaviour is NOT welcome in ANY form.**
+**Update:** Bozhidar [has now published his thoughts on the matter][bbatsov-post], and I’m grateful for his conscientious leadership here.
+
+As for me, let me also speak this, as one representative of the Ruby community: **There is no place for this vitriol here. This behaviour is NOT welcome in ANY form.**
 
 There are many ills that plague the world right now, and whether or not you think software naming changes have a role to play in improving things — I do — it should at least be clear that one easy way to make a better world is to bring our best selves into every situation. And if you feel you can’t do this, consider just [giving it five minutes][jason-fried-five-minutes].
 
@@ -47,3 +49,4 @@ To everyone else in the Ruby community: “Matz is nice so we are nice” is not
 [rubocop-issue-locked]: https://github.com/rubocop-hq/rubocop/issues/8091#issuecomment-640192148
 [jason-fried-five-minutes]: https://signalvnoise.com/posts/3124-give-it-five-minutes
 [rubocop-coc]: https://github.com/rubocop-hq/rubocop/commit/672e7fae4da6af6c1ff690dd4e2cc8a293e1ed3d
+[bbatsov-post]: https://metaredux.com/posts/2020/06/08/the-rubocop-name-drama-redux.html
