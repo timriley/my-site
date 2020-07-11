@@ -1,27 +1,27 @@
-h1 class="text-2xl md:text-3xl font-extrabold mb-6" style="text-color: #222"
-  span> class="inline-block rounded bg-pink-lightest p-px pl-1 -ml-1 pr-1" Tim Riley
+h1 class="text-2xl md:text-3xl font-extrabold leading-tight" style="text-color: #222"
+  span> class="inline-block rounded bg-pink-200 p-px pl-1 -ml-1 pr-1" Tim Riley
   | is a software developer from Canberra, Australia.
 
-.text-xl.leading-normal.mb-8
+.text-xl.mb-8
   ' Tim is a principal engineer at <a href="https://www.cultureamp.com">Culture Amp</a>,
   ' and a core developer of <a href="http://dry-rb.org">dry-rb</a>
   ' and <a href="http://rom-rb.org">rom-rb</a>.
   ' He’s excited by small libraries, first-class functions,
   ' and pushing forward web app development with Ruby.
 
-h2.mb-6.text-pink-dark
+h2.text-pink-500
   a class="hover:no-underline" href="/writing"
     | Recent writing
 
 - articles.each do |article|
-  div.mb-6
-    a class="inline-block mb-1 font-bold text-lg text-black hover:text-pink hover:no-underline" href=article.url
+  div.mb-5
+    a class="inline-block font-bold text-lg text-black hover:text-pink-400 hover:no-underline" href=article.url
       = article.title
-    div class="font-mono text-xs text-grey"
+    div class="font-mono text-xs text-gray-500"
       time datetime=article.datetime_code = article.display_date
       - if article.external?
         '  -
         = article.external_url_domain
 
-.mb-6
-  a class="font-mono text-sm text-black font-bold hover:text-pink hover:no-underline" href="/writing"
+.mb-5
+  a class="font-mono text-sm text-black font-bold hover:text-pink-400 hover:no-underline" href="/writing"

@@ -1,13 +1,13 @@
 - page_title "Writing"
 
-h2.mb-6.text-pink-dark
+h2.text-pink-500
   | Writing
 
 - articles.each do |article|
   div.mb-6
-    a class="inline-block mb-1 font-bold text-lg text-black hover:text-pink hover:no-underline" href=article.url
+    a class="inline-block font-bold text-lg text-black hover:text-pink-400 hover:no-underline" href=article.url
       = article.title
-    div class="font-mono text-xs text-grey"
+    div class="font-mono text-xs text-gray-500"
       time datetime=article.datetime_code = article.display_date
       - if article.external?
         '  -

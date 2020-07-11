@@ -1,25 +1,38 @@
+const path = require("path")
 const ManifestPlugin = require("webpack-manifest-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
-module.exports = function(env, argv) {
+module.exports = function config(mode, argv) {
   return {
+    mode: mode,
     entry: {
       site: [
-        './assets/index.js',
-        './assets/index.css',
+        "./assets/index.js",
+        "./assets/index.css",
       ],
       // Don't process site content for now
       // content: './assets/content.js',
     },
     output: {
-      filename: '[name].[hash:8].js',
-      path: __dirname + '/build/assets',
+      filename: mode === "development" ? "[name].js" : "[name].[chunkhash].js",
+      path:
+        mode === "development"
+          ? path.resolve(__dirname, "./tmp/assets")
+          : path.resolve(__dirname, "./build/assets"),
+      publicPath:
+        mode === "development"
+          ? `http://localhost:${process.env.PORT}/assets/`
+          : "/assets/",
     },
     plugins: [
       new ManifestPlugin(),
       new MiniCssExtractPlugin({
-        filename: "[name].[hash:8].css",
-        chunkFilename: "[id].css"
+        // chunkFilename: "[id].css"
+        // filename: "[name].[hash:8].css",
+        chunkFilename: "[id].[chunkhash].css",
+        ignoreOrder: false,
+        filename:
+          mode === "development" ? "[name].css" : "[name].[chunkhash].css",
       })
     ],
     module: {
@@ -27,25 +40,31 @@ module.exports = function(env, argv) {
         {
           test: /\.css$/,
           use: [
-            MiniCssExtractPlugin.loader,
             {
-              loader: 'css-loader',
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                hmr: mode === "development",
+              },
+            },
+            {
+              loader: "css-loader",
               options: {
                 importLoaders: 1,
-                minimize: argv.mode == 'production',
               }
             },
-            'postcss-loader',
+            "postcss-loader",
           ]
         },
         {
           test: /\.(gif|jpg|png)$/,
           use: [
             {
-              loader: 'file-loader',
+              loader: "file-loader",
               options: {
-                name: '[name].[hash:8].[ext]',
-                useRelativePath: true,
+                name:
+                  mode === "development"
+                    ? "[path][name].[ext]"
+                    : "[path][name].[contenthash].[ext]",
               },
             },
           ],

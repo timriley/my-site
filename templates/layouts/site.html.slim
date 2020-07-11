@@ -11,33 +11,33 @@ html
     title = page_title
   body
     div class="px-8 md:px-0 mb-8"
-      div class="flex flex-wrap max-w-xl -mx-8 md:mx-auto my-8"
-        div class="self-end w-full px-8 md:pl-0 md:pr-3 md:w-1/6 md:text-right mb-1 md:mb-px"
-          a class="text-grey font-mono text-xs hover:no-underline hover:text-pink" href="/"
+      div class="flex flex-wrap max-w-5xl -mx-8 md:mx-auto my-8"
+        div class="self-end w-full px-8 md:pl-0 md:pr-3 md:w-1/6 md:text-right"
+          a class="text-gray-500 font-mono text-xs hover:no-underline hover:text-pink-400" href="/"
             | timriley.info
 
         div class="self-end w-full px-8 md:px-0 md:w-2/3"
           nav.font-mono
-            ul.list-reset.flex
+            ul.list-reset.flex.text-xs
               li.mr-3
-                a class="no-underline text-xs text-grey-darker hover:text-pink hover:no-underline" href="/writing"
+                a class="no-underline text-xs text-gray-700 hover:text-pink-400 hover:no-underline" href="/writing"
                   | /writing
               li.mr-3
-                a class="no-underline text-xs text-grey-darker hover:text-pink hover:no-underline" href="/speaking"
+                a class="no-underline text-xs text-gray-700 hover:text-pink-400 hover:no-underline" href="/speaking"
                   | /speaking
               li
-                a class="no-underline text-xs text-grey-darker hover:text-pink hover:no-underline" href="/about"
+                a class="no-underline text-xs text-gray-700 hover:text-pink-400 hover:no-underline" href="/about"
                   | /about
 
     div class="px-8 md:px-0"
-      div class="flex flex-wrap max-w-xl -mx-8 md:mx-auto mb-8"
+      div class="flex flex-wrap max-w-5xl -mx-8 md:mx-auto mb-8"
         div class="w-full px-8 md:px-0 md:w-1/6"
         div class="w-full px-8 md:px-0 md:w-2/3"
           == yield
 
     div class="px-8 md:px-0"
-      div class="flex flex-wrap max-w-xl -mx-8 md:mx-auto mb-8 pt-8"
+      div class="flex flex-wrap max-w-5xl -mx-8 md:mx-auto mb-8 pt-8"
         div class="w-full px-8 md:px-0 md:w-1/6"
-        div class="w-full px-8 md:px-0 md:w-2/3 text-grey font-mono text-xs"
+        div class="w-full px-8 md:px-0 md:w-2/3 text-gray-500 font-mono text-xs"
           | &copy; 2008-#{Time.now.year} Tim Riley. All&nbsp;rights&nbsp;reserved.
 

@@ -1,6 +1,6 @@
 - page_title "Speaking"
 
-h2.mb-6.text-pink-dark
+h2.text-pink-500
   | Speaking
 
 .copy
@@ -8,13 +8,13 @@ h2.mb-6.text-pink-dark
   p I’d love to do this more. I’m available for speaking opportunities in <strike>2020</strike>2021. Please <a href="/about">get in touch</a>.
 
 - if upcoming_talks.any?
-  h3.mb-6.text-pink-dark
+  h3.text-pink-500
     | Upcoming talks
   - upcoming_talks.each do |talk|
     == talk.render(:talk, as: :talk)
 
 - if past_talks.any?
-  h3.mb-6.text-pink-dark
+  h3.text-pink-500
     | Past talks
   - past_talks.each do |talk|
     == talk.render(:talk, as: :talk)

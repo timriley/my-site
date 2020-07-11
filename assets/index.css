@@ -1,3 +1,4 @@
+/* purgecss start ignore */
 /**
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
@@ -5,12 +6,13 @@
  * You can see the styles here:
  * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
  */
-@tailwind preflight;
+@tailwind base;
 
 /**
  * This injects any component classes registered by plugins.
  */
 @tailwind components;
+/* purgecss end ignore */
 
 /**
  * Here you would add any of your custom component classes; stuff that you'd
@@ -28,12 +30,25 @@ body {
 }
 
 a {
-  @apply .no-underline .text-pink;
+  @apply .no-underline .text-pink-400;
 }
 a:hover {
   @apply .underline;
 }
 
+h1 {
+  @apply .mb-5 .text-3xl .font-extrabold;
+}
+
+h2 {
+  @apply .mb-5 .text-2xl .font-bold;
+}
+
+h3 {
+  @apply .mb-4 .text-lg .font-bold;
+}
+
+/* purgecss start ignore */
 .copy {
   @apply .text-lg;
 }
@@ -44,7 +59,7 @@ a:hover {
 }
 
 .copy p {
-  @apply .mb-6 .leading-normal;
+  @apply .mb-5 .leading-normal;
 }
 
 /* .copy p:last-child {
@@ -64,12 +79,13 @@ a:hover {
 }
 
 .copy h1, .copy h2, .copy h3, .copy h4, .copy h5, .copy h6 {
-  @apply .text-pink;
+  @apply .text-pink-500;
 }
 
 .copy pre {
   @apply .mb-6 .overflow-scroll;
 }
+/* purgecss start ignore */
 
 /**
  * This injects all of Tailwind's utility classes, generated based on your

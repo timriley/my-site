@@ -16,7 +16,7 @@ module Site
 
       def [](asset)
         if (path = manifest[asset])
-          "/#{ASSETS_DIR}/#{path}"
+          path
         end
       end
 
@@ -47,7 +47,7 @@ module Site
       end
 
       def [](asset)
-        "#{url}/#{ASSETS_DIR}/#{asset}"
+        "#{url}/#{asset}"
       end
 
       def read(asset)
