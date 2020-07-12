@@ -82,7 +82,7 @@ After musing on static generators for months, I'm really happy with how this one
 - [x] Handle webpack build outside of `generate` operation
 - [ ] Document deployment options
 - [ ] Demonstrate ease of testing by adding unit & integration tests for my site's specific behaviors
-- [ ] Return something more meaningful from operations than `Success(root)`
+- [x] Return something more meaningful from operations than `Success(root)`
 - [ ] Display nicer output during prepare/generate
 - [ ] Write a DSL for more expressively defining rules for the prepare/generate build stages
 - [ ] Make another example of an importer

@@ -34,7 +34,7 @@ module Site
         render export_dir, "writing/#{article.permalink}/index.html", article_view, article: article
       end
 
-      Success(root)
+      Success()
     end
 
     private

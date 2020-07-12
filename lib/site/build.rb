@@ -16,7 +16,7 @@ module Site
     def call(root)
       yield prepare.(root)
       yield generate.(root)
-      Success(root)
+      Success()
     end
   end
 end
