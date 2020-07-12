@@ -1,3 +1,16 @@
+GIT
+  remote: https://github.com/hanami/view
+  revision: 1b18bfe2fb59879d9117720892d2f55db9f1c584
+  branch: master
+  specs:
+    hanami-view (2.0.0.alpha1)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 0.1)
+      dry-core (~> 0.2)
+      dry-equalizer (~> 0.2)
+      dry-inflector (~> 0.1)
+      tilt (~> 2.0, >= 2.0.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -50,11 +63,6 @@ GEM
       dry-equalizer (~> 0.2)
       dry-logic (~> 0.4, >= 0.4.2)
       inflecto (~> 0.0.0, >= 0.0.2)
-    dry-view (0.5.0)
-      dry-configurable (~> 0.1)
-      dry-core (~> 0.2)
-      dry-equalizer (~> 0.2)
-      tilt (~> 2.0)
     ffi (1.9.23)
     foreman (0.64.0)
       dotenv (~> 0.7.0)
@@ -152,11 +160,11 @@ DEPENDENCIES
   dry-monads (~> 1.0)
   dry-system
   dry-types
-  dry-view
   foreman
   front_matter_parser (~> 0.1, >= 0.1.1)
   guard
   guard-shell
+  hanami-view!
   pry
   rom
   rom-sql

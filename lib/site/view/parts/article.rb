@@ -1,14 +1,14 @@
 # auto_register: false
 
+require "commonmarker"
+require "hanami/view/part"
 require "time"
 require "uri"
-require "dry/view/part"
-require "commonmarker"
 
 module Site
   module View
     module Parts
-      class Article < Dry::View::Part
+      class Article < Hanami::View::Part
         def absolute_url
           external_url || "#{context.site_url}/writing/#{permalink}"
         end

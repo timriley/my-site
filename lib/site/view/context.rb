@@ -1,11 +1,12 @@
-require "uri"
 require "dry/core/constants"
 require "forwardable"
+require "hanami/view/context"
 require "site/import"
+require "uri"
 
 module Site
   module View
-    class Context
+    class Context < Hanami::View::Context
       extend Forwardable
 
       include Dry::Core::Constants
@@ -38,10 +39,6 @@ module Site
         else
           assets[path]
         end
-      end
-
-      def new(**new_options)
-        self.class.new(@deps.merge(current_path: current_path).merge(new_options))
       end
     end
   end

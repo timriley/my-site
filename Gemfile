@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+
 ruby "2.7.1"
 
 gem "builder"
@@ -10,7 +12,7 @@ gem "dry-inflector"
 gem "dry-monads", "~> 1.0"
 gem "dry-system"
 gem "dry-types"
-gem "dry-view"
+gem "hanami-view", github: "hanami/view", branch: "master"
 gem "pry"
 gem "rom"
 gem "rom-sql"

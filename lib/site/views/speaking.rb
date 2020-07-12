@@ -1,10 +1,10 @@
 require "site/import"
-require "site/view/controller"
+require "site/view/base"
 require "site/view/parts/talk"
 
 module Site
   module Views
-    class Speaking < View::Controller
+    class Speaking < View::Base
       include Import["repos.talk_repo"]
 
       configure do |config|

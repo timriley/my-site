@@ -1,10 +1,10 @@
 require "site/import"
-require "site/view/controller"
+require "site/view/base"
 require "site/view/parts/article"
 
 module Site
   module Views
-    class Feed < View::Controller
+    class Feed < View::Base
       include Site::Import["settings", "repos.article_repo"]
 
       configure do |config|

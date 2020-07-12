@@ -1,14 +1,14 @@
 # auto_register: false
 
+require "commonmarker"
+require "hanami/view/part"
 require "time"
 require "uri"
-require "dry/view/part"
-require "commonmarker"
 
 module Site
   module View
     module Parts
-      class Talk < Dry::View::Part
+      class Talk < Hanami::View::Part
       end
     end
   end

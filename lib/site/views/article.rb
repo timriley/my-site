@@ -1,9 +1,9 @@
-require "site/view/controller"
+require "site/view/base"
 require "site/view/parts/article"
 
 module Site
   module Views
-    class Article < View::Controller
+    class Article < View::Base
       configure do |config|
         config.template = "article"
       end

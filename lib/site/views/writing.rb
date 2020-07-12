@@ -1,10 +1,10 @@
 require "site/import"
-require "site/view/controller"
+require "site/view/base"
 require "site/view/parts/article"
 
 module Site
   module Views
-    class Writing < View::Controller
+    class Writing < View::Base
       include Import["repos.article_repo"]
 
       configure do |config|

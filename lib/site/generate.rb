@@ -40,7 +40,7 @@ module Site
     private
 
     def render(export_dir, path, view, **input)
-      context = view.class.config.context.new(current_path: path.sub(%r{/index.html$}, ""))
+      context = view.class.config.default_context.with(current_path: path.sub(%r{/index.html$}, ""))
 
       export.(export_dir, path, view.(context: context, **input))
     end
