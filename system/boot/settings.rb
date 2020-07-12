@@ -4,14 +4,14 @@ Site::Container.boot :settings, from: :system do
   end
 
   settings do
-    key :import_dir, Site::Types::Strict::String
-    key :export_dir, Site::Types::Strict::String
+    key :import_dir, Site::Types::String
+    key :export_dir, Site::Types::String
 
-    key :assets_precompiled, Site::Types::Form::Bool
-    key :assets_server_url, Site::Types::Strict::String.optional
+    key :assets_precompiled, Site::Types::Params::Bool
+    key :assets_server_url, Site::Types::String.optional.default(nil)
 
-    key :site_name, Site::Types::Strict::String
-    key :site_author, Site::Types::Strict::String
-    key :site_url, Site::Types::Strict::String
+    key :site_name, Site::Types::String
+    key :site_author, Site::Types::String
+    key :site_url, Site::Types::String
   end
 end
