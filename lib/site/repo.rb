@@ -4,7 +4,7 @@ require "site/entities"
 
 module Site
   class Repo < ROM::Repository::Root
-    include Import.args["database.rom"]
+    include Import[container: "database.rom"]
 
     struct_namespace Entities
   end
