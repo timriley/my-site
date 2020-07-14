@@ -37,7 +37,7 @@ module Site
         private
 
         def render_markdown(str)
-          doc = CommonMarker.render_doc(str, [:FOOTNOTES, :SMART])
+          doc = CommonMarker.render_doc(str, [:FOOTNOTES, :SMART, :UNSAFE])
 
           doc.walk do |node|
             if node.type == :image
@@ -46,7 +46,7 @@ module Site
             end
           end
 
-          doc.to_html
+          doc.to_html(:UNSAFE)
         end
       end
     end
