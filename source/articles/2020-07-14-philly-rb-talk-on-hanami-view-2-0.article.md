@@ -11,6 +11,7 @@ I took the opportunity to revise my [year-ago talk about dry-view](https://www.i
 You can watch along here:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/GDEbrJeIwfM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
 
 Doing a talk like this for a fully-remote audience was tricky. With its narrative structure and dramatic premise, I rely on audience cues to make sure I’m hitting the mark. Here, I just had to passionately project into the void... and hope it landed!
 
