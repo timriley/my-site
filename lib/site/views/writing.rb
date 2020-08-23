@@ -4,7 +4,7 @@ require "site/view/parts/article"
 module Site
   module Views
     class Writing < View::Base
-      include Import["repos.article_repo"]
+      include Deps["repos.article_repo"]
 
       configure do |config|
         config.template = "writing"

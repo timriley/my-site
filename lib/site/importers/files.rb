@@ -15,7 +15,7 @@ module Site
         YAML.safe_load(str, permitted_classes: [Date, Time])
       }.freeze
 
-      include Import[
+      include Deps[
         "database.rom",
         "inflector",
       ]

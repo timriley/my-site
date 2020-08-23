@@ -3,6 +3,10 @@ require "site/repo"
 module Site
   module Repos
     class ArticleRepo < Site::Repo[:articles]
+      def get_by_slug(slug)
+        articles.by_permalink(slug).one!
+      end
+
       def published(limit: nil)
         articles
           .published

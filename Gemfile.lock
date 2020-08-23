@@ -1,4 +1,41 @@
 GIT
+  remote: https://github.com/hanami/controller
+  revision: a2ead8e5eee905bb584d90d9ef7726d7a5d7d019
+  branch: unstable
+  specs:
+    hanami-controller (2.0.0.alpha1)
+      dry-configurable (~> 0.11, >= 0.11.6)
+      hanami-utils (~> 2.0.alpha)
+      rack (~> 2.0)
+
+GIT
+  remote: https://github.com/hanami/hanami
+  revision: 1c636b8459bfa82eb52d5be2fd7b433cd4a86d91
+  branch: unstable
+  specs:
+    hanami (2.0.0.alpha1)
+      bundler (>= 1.16, < 3)
+      dry-core (~> 0.4)
+      dry-inflector (~> 0.1, >= 0.1.2)
+      dry-monitor
+      dry-system (~> 0.10)
+      hanami-cli (~> 1.0.alpha)
+      hanami-controller (~> 2.0.alpha)
+      hanami-router (~> 2.0.alpha)
+      hanami-utils (~> 2.0.alpha)
+      hanami-view (~> 2.0.alpha)
+
+GIT
+  remote: https://github.com/hanami/router
+  revision: 3d469cdac3559b65c40b08ace882ac3e407c5b81
+  branch: unstable
+  specs:
+    hanami-router (2.0.0.alpha3)
+      mustermann (~> 1.0)
+      mustermann-contrib (~> 1.0)
+      rack (~> 2.0)
+
+GIT
   remote: https://github.com/hanami/view
   revision: 2c7e9d1d231ae60046f6b237124937fc775c106b
   branch: main
@@ -13,20 +50,16 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    break (0.20.0)
     builder (3.2.4)
-    byebug (11.1.3)
     coderay (1.1.3)
     commonmarker (0.21.2)
       ruby-enum (~> 0.5)
-    concurrent-ruby (1.2.2)
-    dotenv (2.8.1)
-    dry-auto_inject (1.0.1)
-      dry-core (~> 1.0)
-      zeitwerk (~> 2.6)
-    dry-configurable (1.0.1)
-      dry-core (~> 1.0, < 2)
-      zeitwerk (~> 2.6)
-    dry-core (1.0.0)
+    concurrent-ruby (1.1.6)
+    dotenv (2.7.6)
+    dry-auto_inject (0.7.0)
+      dry-container (>= 0.3.4)
+    dry-configurable (0.11.6)
       concurrent-ruby (~> 1.0)
       zeitwerk (~> 2.6)
     dry-inflector (1.0.0)
@@ -37,11 +70,30 @@ GEM
       zeitwerk (~> 2.6)
     dry-monads (1.6.0)
       concurrent-ruby (~> 1.0)
-      dry-core (~> 1.0, < 2)
-      zeitwerk (~> 2.6)
-    dry-struct (1.6.0)
-      dry-core (~> 1.0, < 2)
-      dry-types (>= 1.7, < 2)
+    dry-equalizer (0.3.0)
+    dry-events (0.2.0)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 0.4)
+      dry-equalizer (~> 0.2)
+    dry-inflector (0.2.0)
+    dry-initializer (3.0.3)
+    dry-logic (1.0.6)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 0.2)
+      dry-equalizer (~> 0.2)
+    dry-monads (1.3.5)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 0.4, >= 0.4.4)
+      dry-equalizer
+    dry-monitor (0.3.2)
+      dry-configurable (~> 0.5)
+      dry-core (~> 0.4)
+      dry-equalizer (~> 0.2)
+      dry-events (~> 0.2)
+    dry-struct (1.3.0)
+      dry-core (~> 0.4, >= 0.4.4)
+      dry-equalizer (~> 0.3)
+      dry-types (~> 1.3)
       ice_nine (~> 0.11)
       zeitwerk (~> 2.6)
     dry-system (1.0.1)
@@ -72,7 +124,14 @@ GEM
     guard-shell (0.7.2)
       guard (>= 2.0.0)
       guard-compat (~> 1.0)
-    i18n (1.12.0)
+    hanami-cli (1.0.0.alpha1)
+      concurrent-ruby (~> 1.0)
+      hanami-utils (~> 2.0.alpha)
+    hanami-utils (2.0.0.alpha1)
+      concurrent-ruby (~> 1.0)
+      transproc (~> 1.0)
+    hansi (0.2.0)
+    i18n (1.8.3)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
     listen (3.8.0)
@@ -80,7 +139,11 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     lumberjack (1.2.8)
     method_source (1.0.0)
-    mini_portile2 (2.8.1)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
+    mustermann-contrib (1.1.1)
+      hansi (~> 0.2.0)
+      mustermann (= 1.1.1)
     nenv (0.3.0)
     notiffany (0.1.3)
       nenv (~> 0.1)
@@ -88,7 +151,8 @@ GEM
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    rb-fsevent (0.11.2)
+    rack (2.2.3)
+    rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rom (5.3.0)
@@ -119,7 +183,8 @@ GEM
       sequel (>= 4.49)
     ruby-enum (0.9.0)
       i18n
-    sequel (5.66.0)
+    ruby2_keywords (0.0.2)
+    sequel (5.34.0)
     shellany (0.0.1)
     slim (4.1.0)
       temple (>= 0.7.6, < 0.9)
@@ -136,8 +201,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  break
   builder (~> 3.2)
-  byebug
   commonmarker (~> 0.21.0)
   dotenv
   dry-core
@@ -149,6 +214,9 @@ DEPENDENCIES
   front_matter_parser (~> 0.1, >= 0.1.1)
   guard
   guard-shell
+  hanami!
+  hanami-controller!
+  hanami-router!
   hanami-view!
   pry
   rom (~> 5.0)

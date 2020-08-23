@@ -4,7 +4,7 @@ require "site/view/parts/talk"
 module Site
   module Views
     class Speaking < View::Base
-      include Import["repos.talk_repo"]
+      include Deps["repos.talk_repo"]
 
       configure do |config|
         config.template = "speaking"

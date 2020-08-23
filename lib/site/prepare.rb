@@ -6,7 +6,7 @@ module Site
   class Prepare
     include Dry::Monads::Result::Mixin
 
-    include Import[
+    include Deps[
       "settings",
       import_files: "importers.files"
     ]

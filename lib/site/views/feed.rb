@@ -4,7 +4,7 @@ require "site/view/parts/article"
 module Site
   module Views
     class Feed < View::Base
-      include Site::Import["settings", "repos.article_repo"]
+      include Site::Deps["settings", "repos.article_repo"]
 
       configure do |config|
         config.template = "feed"

@@ -3,7 +3,7 @@
 require "fileutils"
 require "optparse"
 require "bundler/setup"
-require_relative "../system/boot"
+require "hanami/boot"
 
 options = {
   assets: true,
@@ -34,4 +34,4 @@ if options[:assets]
   Process.wait pid
 end
 
-Site::Container.build
+Site::Application.build

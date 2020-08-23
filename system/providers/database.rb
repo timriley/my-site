@@ -1,5 +1,5 @@
-Site::Container.register_provider :database, namespace: true do
-  prepare do
+Hanami.application.register_bootable :database, namespace: true do |site|
+  init do
     require "sequel"
     require "rom"
     require "rom/sql"

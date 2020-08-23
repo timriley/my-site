@@ -10,7 +10,7 @@ module Site
 
       include Dry::Core::Constants
 
-      include Import["assets", "settings"]
+      include Deps["assets", "settings"]
 
       def_delegators :settings, :site_title, :site_author, :site_url
 
