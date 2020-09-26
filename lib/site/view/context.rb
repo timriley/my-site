@@ -13,7 +13,7 @@ module Site
 
       include Import["assets", "settings"]
 
-      def_delegators :settings, :site_name, :site_author, :site_url
+      def_delegators :settings, :site_title, :site_author, :site_url
 
       attr_reader :current_path
 
@@ -27,7 +27,7 @@ module Site
 
       def page_title(new_title = Undefined)
         if new_title == Undefined
-          [@page_title, site_name].compact.join(" | ")
+          [@page_title, settings.site_title].compact.join(" | ")
         else
           @page_title = new_title
         end

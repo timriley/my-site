@@ -1,7 +1,7 @@
 xml.instruct!
 
 xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
-  xml.title site_name
+  xml.title site_title
   xml.link "href" => site_url
   xml.updated Time.now.iso8601 # make better
   xml.author do

@@ -10,7 +10,7 @@ Site::Container.boot :settings, from: :system do
     key :assets_precompiled, Site::Types::Params::Bool
     key :assets_server_url, Site::Types::String.optional.default(nil)
 
-    key :site_name, Site::Types::String
+    key :site_title, Site::Types::String
     key :site_author, Site::Types::String
     key :site_url, Site::Types::String
   end
