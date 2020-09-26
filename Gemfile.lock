@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/hanami/view
-  revision: 1b18bfe2fb59879d9117720892d2f55db9f1c584
+  revision: c4fb06a6b419cc83f2bb7f8b3027b07f03d3f199
   branch: master
   specs:
     hanami-view (2.0.0.alpha1)
