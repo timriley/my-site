@@ -16,6 +16,7 @@ module Site
       feed_view: "views.feed",
       home_view: "views.home",
       speaking_view: "views.speaking",
+      sponsors_view: "views.sponsors",
       writing_view: "views.writing",
     ]
 
@@ -28,6 +29,7 @@ module Site
       render export_dir, "writing/index.html", writing_view
       render export_dir, "feed.xml", feed_view
       render export_dir, "speaking/index.html", speaking_view
+      render export_dir, "sponsors/index.html", sponsors_view
       render export_dir, "about/index.html", about_view
 
       article_repo.internal_published.each do |article|
