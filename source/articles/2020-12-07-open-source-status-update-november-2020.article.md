@@ -94,7 +94,7 @@ module Test
 end
 ```
 
-With tihs in place, we can resolve `Test::Container["foo_builder"]`, receive an instance of `Test::FooBuilder` as expected, then `.call` it to receive our instance `Test::Foo`. Tada!
+With this in place, we can resolve `Test::Container["foo_builder"]`, receive an instance of `Test::FooBuilder` as expected, then `.call` it to receive our instance `Test::Foo`. Tada!
 
 I’m very happy with how all this came together.
 
