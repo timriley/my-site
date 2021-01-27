@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "start": "PORT=8080 concurrently \"node bin/assets.js development\" \"serve ./tmp\" --kill-others --prefix-colors=yellow.dim,cyan.dim",
-    "build": "NODE_ENV=production node bin/assets.js production"
+    "build": "node bin/assets.js production"
   },
   "devDependencies": {
     "chalk": "^4.1.0",
