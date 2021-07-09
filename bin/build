@@ -30,7 +30,7 @@ end
 
 if options[:assets]
   command = "yarn run build"
-  pid = spawn(command, :in => STDIN, :out => STDOUT, :err => STDERR)
+  pid = spawn({'NODE_ENV'=>'production'}, command, :in => STDIN, :out => STDOUT, :err => STDERR)
   Process.wait pid
 end
 
