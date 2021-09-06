@@ -1,6 +1,6 @@
 ---
 title: Open source status update, June 2021
-permalink: 2021-07-11/open-source-status-update-june-2021
+permalink: 2021/07/11/open-source-status-update-june-2021
 published_at: 2021-07-11 23:00:00 +1000
 ---
 
