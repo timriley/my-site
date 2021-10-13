@@ -39,7 +39,7 @@ Before I committed to polishing off the implementation in dry-system, I wanted t
 
 A fun quip, but I think this is an important aspect of the work we’re doing in Hanami 2. We’re not putting in this amount of effort just to arrive at a toughly coupled framework that can deliver only for a small subset of users. Rather, we’re trying to establish powerful, flexible, well-factored building blocks that deliver not only the default Hanami experience, but also serve as useful tools unto themselves. The idea with this approach is that it should allow an Hanami user to “eject” themselves from any particular aspect of the framework’s defaults whenever their needs require it: they can dive deeper and use/configure constituent parts directly, while still using the rest of the framework for the value it provides.
 
-# dry-system component dir namespaces are done, at last!
+## dry-system component dir namespaces are done, at last!
 
 Confident about the use case in Hanami, I used the rest of the month (and a little bit of October, _shh!_) to finish off the dry-system namespaces. Here’s how they look:
 
