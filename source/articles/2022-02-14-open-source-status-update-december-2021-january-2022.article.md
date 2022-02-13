@@ -1,0 +1,46 @@
+---
+title: Open source status update, December 2021 and January 2022
+permalink: 2022/02/14/open-source-status-update-december-2021-january-2022
+published_at: 2022-02-14 00:20 +1100
+---
+
+I’ve been on an absolute tear with my OSS work lately. I’ve been feeling such good momentum that every time I got a moment at the computer, I just had to keep pushing forward with code rather than writing one of these updates. Now that there’s been a couple of Hanami releases and a big dry-system one since the my last update, it’s time for a roundup.
+
+The best thing about the last two months was that I took the first two week in January off from work, and dedicated myself 9-5 to OSS while everyone was still on holidays (the reality was probably more like 10am-4pm then 9pm-12am, but I was having too much fun to stop). This allowed me to get through some really chunky efforts that would’ve been really hard to string along across post-work nighttime efforts alone.
+
+All of this has meant I’ve got a lot to get through here, so I’m going to revert to dot list form with at most a comment or two, otherwise I’ll never get this post done (and you probably won’t want to read it all anyway). Here goes:
+
+- Back in December I [started the new `source_dirs` configuration for Hanami](https://github.com/hanami/hanami/pull/1133), along with some corresponding [broadening of the dry-system component dir config API](https://github.com/dry-rb/dry-system/pull/195)
+- I also [updated the Hanami router to initialize itself lazily](https://github.com/hanami/hanami/pull/1135), which will allow for for the Hanami applications to scale down better to Lambda/FaaS-size deployments, since you can now keep the application non-booted and still access the router for e.g. a subset of your routes. It’s also an important step towards faster application reloading in development.
+- In January (happy new year!) I took care of the [Hanami 2.0.0.alpha5 release](https://hanamirb.org/blog/2022/01/12/announcing-hanami-200alpha5/) in January (featuring the `source_dirs` config, the lazy router, and more).
+- I then moved onto dry-system for the rest of the month, kicking things off by finishing a [comprehensive glossary for dry-system](https://github.com/dry-rb/dry-system/pull/198), intended to go into our docs as a quick reference to alo important terms, but I also used it as a trial run for some naming changes that I’ve been wanting to make for a while.
+- That was received well so I went ahead and [renamed “bootable components” to “providers”](https://github.com/dry-rb/dry-system/pull/200) (and the “init” provider lifecycle step to “prepare”), as well as the renaming the “component provider” concept to “external provider sources.” This change has made so many parts of dry-system easier to explain more precisely, since we avoid a range of confusing overlaps. It feels really good.
+- With the naming change done, I [overhauled the provider implementation](https://github.com/dry-rb/dry-system/pull/202) as well, making it so that providers were backed by distinct classes and corresponding instances, and also clarifying just how providers can access their target container. This one took my four different tries to get right (and ate at my mind over a whole weekend), but I think it turned out really well. The new class-backed providers open up a lot of possibilities for better handling complex provider code, while still preserving ease of use for simpler providers.
+- In more provider tidy up, I [removed the `use` method from the provider API](https://github.com/dry-rb/dry-system/pull/211), since the target container can now be consistently accessed, and can be used to start other provider’s via its own standard `.prepare` and `.start` methods.
+- I [updated our built-in “settings” provider source to use Dotenv](https://github.com/dry-rb/dry-system/pull/204) rather than maintain our own `.env*` file loading and parsing code. Goodbye extra code, I will not miss you.
+- I scratched one of my biggest itches and [removed an overload of dry-configurable’s setting method inside dry-system](https://github.com/dry-rb/dry-system/pull/201). This one proved to be a bit of a challenge to sort out, since it required [adjustments to class-level `config` access inside dry-configurable](https://github.com/dry-rb/dry-configurable/pull/130), and dry-configurable’s test suite is so exacting it often doesn’t leave much wriggle room. In this case I was able to thread the needle and even bring some clarity to previous unspecified behaviours.
+- Another little thing, I [removed support for a configurable key namespace separator in dry-system](https://github.com/dry-rb/dry-system/pull/206), which really never made sense given how much dry-system needs to manipulate these keys, and given how important it is for our docs to make sense with `"."` used as the key separator everywhere.
+- I [expended dry-system’s API for its container configuration](https://github.com/dry-rb/dry-system/pull/207), formalising container configuration as a distinct phase that can be completed with its own `configured!` method. This allows dry-system’s `config` object to be configured directly rather than forcing everyone to go through the `configure do |config|` block-based API, which was a quirk specific to dry-system, and not in any other usage of dry-configurable throughout our ecosystem. This not only makes things easier for our direct users, but will make Hanami’s integration of dry-system more straightforward, since it’s (fairly lengthy) config and setup code no longer needs to descend into that extra block.
+- In another glossary-driven change, I [renamed the “manual registrar” to “manifest registrar”](https://github.com/dry-rb/dry-system/pull/208), since it loads registrations from manifest files, also freeing the term “manual registration“ for any individual act of calling `.register` on the container.
+- This one is big! I added support for [partial container exports and imports](https://github.com/dry-rb/dry-system/pull/209), which is only something I’ve been thinking about for three years or more. And it turned out to be really straightforward! This is going to be a huge part of dry-system usage going forward, and really reinforces how it can help you better organise your code both in the small and in the large. With dry-system containers able to hide most of their implementation away and just export a few “public” components, they’ll begin to work much better as representations of key high-level concerns withing your applications.
+- I [tidied dry-system’s dependency graph plugin](https://github.com/dry-rb/dry-system/pull/210), and ensured it [supported all injector strategies](https://github.com/dry-rb/dry-system/pull/214).
+- I fixed a 2-year-old bug and made it so that [registrations in providers preserve all their options](https://github.com/dry-rb/dry-system/pull/212) when moving into the target container.
+- I fixed a 2.5-year-old bug and ensured that [providers can’t inadvertently re-start themselves](https://github.com/dry-rb/dry-system/pull/213) while already in the process of starting and cause an infinite loop
+- I restored [support for a configurable `instance` proc on component dir config](https://github.com/dry-rb/dry-system/pull/215).
+- I [added an option to providers to support conditional loading](https://github.com/dry-rb/dry-system/pull/218), making it so that you can have a provider enabled only in particular circumstances, and have it not be loaded (saving time and memory, and improving clarity) when it’s not needed.
+- I added [a couple more useful predicates to `Dry::System::Identifier`](https://github.com/dry-rb/dry-system/pull/219)
+- And finally, I got [Ian Ker-Seymer’s](https://github.com/ianks) work on a [dry-system Zeitwerk plugin across the line](https://github.com/dry-rb/dry-system/pull/197), making it so that dry-system users can use an integrated Zeitwerk setup with just a single line.
+
+Last week [I released all of that dry-system work in version 0.23.0](https://github.com/dry-rb/dry-system/releases/tag/v0.23.0), officially our biggest release ever (go read the release notes!). We’re now looking really close to a 1.0 release for dry-system, with just a few things left to go.
+
+I then updated Hanami to [use this latest dry-system](https://github.com/hanami/hanami/pull/1148) (including all the updated terminology) and [support partial slice imports and exports](https://github.com/hanami/hanami/pull/1149), which we then [released as Hanami 2.0.0.alpha6](https://hanamirb.org/blog/2022/02/10/announcing-hanami-200alpha6/) just a few days ago.
+
+Getting to this point was a lot of work, and it represents a big milestone in our Hanami 2.0 journey. I’m extremely grateful that I could make this my sole focus for a little while.
+
+## Thank you to my sponsors ❤️
+
+My work in Ruby OSS is kindly supported by my [GitHub sponsors](https://github.com/sponsors/timriley).
+
+Thank you in particular to [Jason Charnes](https://github.com/jasoncharnes) and now also Seb Wilgosz (of [HanamiMastery](https://hanamimastery.com)) for your support as my upper tier sponsors!
+
+The 22 dot points in this post show that Hanami 2 is truly getting closer, but there are many dots left to go. [I’d love for your support too](https://github.com/sponsors/timriley) in helping make this happen.
