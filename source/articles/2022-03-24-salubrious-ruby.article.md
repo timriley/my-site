@@ -16,6 +16,7 @@ With this announcement, I’m hoping to change this, and create a little account
 
 I hope you’ll join me while I share the things both big and small that go into making a healthy, wholesome Ruby application!
 
-As I go, I’ll keep a pointer to all the articles below:
+As I go, I’ll keep pointers to all the articles below:
 
 - [Let the shape of the code reflect its flow](/writing/2022/03/24/let-the-shape-of-the-code-reflect-its-flow)
+- [Don’t mutate what you don’t own](/writing/2022/04/28/salubrious-ruby-dont-mutate-what-you-dont-own)
