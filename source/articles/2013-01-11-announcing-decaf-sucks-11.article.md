@@ -6,7 +6,7 @@ published_at: 2013-01-10 08:00:00 +0000
 
 ![](content/images/ss/f576e3f4d908.png)
 
-It's [been a while](http://icelab.com.au/articles/decaf-sucks-launch-countdown-a-restrospective/) since we've talked about [Decaf Sucks](http://decafsucks.com/) on the iPhone. Our first release has run smoothly for a year and a half, helping many thousands of iPhone owners find better coffee. Thanks to our well caffeinated contributors, nearly half of our reviews are now submitted from the app.
+It's [been a while](http://icelab.com.au/notes/decaf-sucks-launch-countdown-a-restrospective/) since we've talked about [Decaf Sucks](http://decafsucks.com/) on the iPhone. Our first release has run smoothly for a year and a half, helping many thousands of iPhone owners find better coffee. Thanks to our well caffeinated contributors, nearly half of our reviews are now submitted from the app.
 
 On this note, we're very excited to announce the release of Decaf Sucks version 1.1 [in the App Store](https://itunes.apple.com/au/app/decaf-sucks/id458958884?mt=8). This release makes it even easier to contribute reviews with the addition of Facebook login support (now available wherever Decaf Sucks exists).
 
