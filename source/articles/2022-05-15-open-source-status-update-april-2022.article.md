@@ -21,7 +21,8 @@ require "hanami/application/action"
 
 module Main
   module Action
-    class Base < Hanami::Application::Action # Used to be just Hanami::Action
+    # Used to inherit from Hanami::Action
+    class Base < Hanami::Application::Action
     end
   end
 end
