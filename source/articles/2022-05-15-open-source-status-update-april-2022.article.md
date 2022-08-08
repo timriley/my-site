@@ -109,7 +109,7 @@ After keeping poor [ojab](https://github.com/ojab) waiting way too long, I also 
 
 I then released these as [dry-configurable 0.15.0](https://github.com/dry-rb/dry-configurable/releases/tag/v0.15.0).
 
-## Started work on unifying Hanami slices and actions
+## Started work on unifying Hanami slices and application
 
 Last but definitely not least, I started work on one of the last big efforts we need in place before 2.0: making Hanami slices act as much as possible like complete, miniature Hanami applications. I’m going to talk about this a lot more in future posts, but for now, I can point you to a few PRs:
 
