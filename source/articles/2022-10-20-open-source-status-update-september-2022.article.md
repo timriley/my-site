@@ -10,7 +10,7 @@ Hello there, friends! This is going to be a short update from me because I’m d
 
 Septebmer started and ended with me looking at the [r10k](https://github.com/jeremyevans/r10k) memory usage charts for hanami-controller versus Rails. The results were surprising!
 
-![Initial memory usage for Hanami::Action vs Rails](https://user-images.githubusercontent.com/3134/196793920-789d0bc4-1bc6-4163-b031-bb7f7afa4434.png)
+![Initial memory usage for Hanami::Action vs Rails](https://user-images.githubusercontent.com/3134/197044951-8e5742ae-8437-43b2-aba7-11352b5b306d.png)
 
 We’d been running some of these checks as part of our 2.0 release prep, the idea being that it’d help us shake out any obvious performance improvements we’d need to make. And it certainly did in this case! Hanami (just like its dry-rb underpinnings) is meant to be the smaller and lighter framework; why were we being outperformced by Rails?
 
