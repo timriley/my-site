@@ -8,7 +8,7 @@ Hello there, friends! This is going to be a short update from me because I’m d
 
 ## A story about Hanami::Action memory usage
 
-Septebmer started and ended with me looking at the [r10k](https://github.com/jeremyevans/r10k) memory usage charts for hanami-controller versus Rails. The results were surprising!
+September started and ended with me looking at the [r10k](https://github.com/jeremyevans/r10k) memory usage charts for hanami-controller versus Rails. The results were surprising!
 
 ![Initial memory usage for Hanami::Action vs Rails](https://user-images.githubusercontent.com/3134/197044951-8e5742ae-8437-43b2-aba7-11352b5b306d.png)
 
