@@ -1,4 +1,3 @@
-
 ---
 title: Quest of the Rubyist (Keynote)
 event: RubyConf Thailand
