@@ -11,10 +11,10 @@ h2.text-pink-500
   h3.text-pink-500
     | Upcoming talks
   - upcoming_talks.each do |talk|
-    == talk.render(:talk, as: :talk)
+    == talk.render("speaking/talk", as: :talk)
 
 - if past_talks.any?
   h3.text-pink-500
     | Past talks
   - past_talks.each do |talk|
-    == talk.render(:talk, as: :talk)
+    == talk.render("speaking/talk", as: :talk)

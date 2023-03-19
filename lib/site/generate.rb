@@ -1,5 +1,4 @@
 require "fileutils"
-require "site/import"
 require "dry/monads"
 require "dry/monads/result"
 
@@ -23,7 +22,8 @@ module Site
     def call(root)
       export_dir = File.join(root, settings.export_dir)
 
-      FileUtils.cp_r File.join(root, "assets/content"), File.join(export_dir, "assets/content")
+      FileUtils.mkdir_p(File.join(export_dir, "assets", "content"))
+      FileUtils.cp_r File.join(root, "assets", "content"), File.join(export_dir, "assets", "content")
 
       render export_dir, "index.html", home_view
       render export_dir, "writing/index.html", writing_view

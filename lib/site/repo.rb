@@ -1,5 +1,4 @@
 require "rom/repository/root"
-require "site/import"
 require "site/entities"
 
 module Site

@@ -1,7 +1,6 @@
 require "pathname"
 require "dry/monads"
 require "dry/monads/result"
-require "site/import"
 
 module Site
   class Prepare
