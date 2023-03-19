@@ -1,5 +1,5 @@
-Site::Container.boot :database, namespace: true do |site|
-  init do
+Site::Container.register_provider :database, namespace: true do
+  prepare do
     require "sequel"
     require "rom"
     require "rom/sql"
@@ -21,7 +21,7 @@ Site::Container.boot :database, namespace: true do |site|
 
   start do
     config = container["database.config"]
-    config.auto_registration site.root.join("lib/database")
+    config.auto_registration target.root.join("lib/database")
 
     config.gateways[:default].auto_migrate!(config, inline: true)
 

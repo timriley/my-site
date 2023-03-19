@@ -1,4 +1,3 @@
-require "site/import"
 require "site/view/base"
 require "site/view/parts/talk"
 

@@ -3,8 +3,6 @@ require "pathname"
 require "transproc"
 require "yaml"
 
-require "site/import"
-
 module Site
   module Importers
     class Files
@@ -14,7 +12,7 @@ module Site
       end
 
       FRONT_MATTER_LOADER = -> str {
-        YAML.safe_load(str, _whitelist_classes = [Date, Time])
+        YAML.safe_load(str, permitted_classes: [Date, Time])
       }.freeze
 
       include Import[
