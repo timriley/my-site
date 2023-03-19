@@ -5,7 +5,7 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 ruby "3.2.1"
 
 gem "builder", "~> 3.2"
-gem "commonmarker", "~> 0.21.0"
+gem "commonmarker", "~> 0.23.7"
 gem "front_matter_parser", "~> 0.1", ">= 0.1.1"
 gem "dotenv"
 gem "dry-core"
