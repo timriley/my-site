@@ -22,7 +22,7 @@ Given I was 100% focused on Hanami dev work until the release, this is probably 
 
 Check it out here:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jxJ4-iadvIk?si=rwmn8RO8lzZSVP7x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jxJ4-iadvIk?si=rwmn8RO8lzZSVP7x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
 
 ## Overhauled hanami-view internals and improved performance
 
@@ -38,7 +38,7 @@ Also in February, I spoke at [RubyConf Australia 2023](https://rubyconf.org.au/2
 
 To fit the homecoming theme, I brought a strong tinge of _Australiana_ to my talk, and expanded it to include a preview of the upcoming view and persistence layers. Check it out:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-B9AbFsQOKo?si=IdY561NsKLMDsvMe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-B9AbFsQOKo?si=IdY561NsKLMDsvMe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
 
 ## Created Hanami::View::ERB, a new ERB engine
 
