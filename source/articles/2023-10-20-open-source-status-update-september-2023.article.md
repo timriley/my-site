@@ -14,7 +14,7 @@ Most of the work was fairly minor: an [error logging fix](https://github.com/han
 
 ## Making our better errors better
 
-There was one interesting piece though. Earlier in this release cycle (back in June!), I overhauled our user-facing error handling. I added a middleware to [catch errors and render static error pages intended display in production](https://github.com/hanami/hanami/pull/1309). As part of this change, I adjusted our router to raise exceptions for mot found routes: doing this would allow the error to be caught and a proper 404 page displayed. So that was production sorted. For development, we [integrated the venerable better_error gem](https://github.com/hanami/hanami/pull/1311), wrapped by our own hanami-webconsole gem.
+There was one interesting piece though. Earlier in this release cycle (back in June!), I overhauled our user-facing error handling. I added a middleware to [catch errors and render static error pages intended display in production](https://github.com/hanami/hanami/pull/1309). As part of this change, I adjusted our router to raise exceptions for not found routes: doing this would allow the error to be caught and a proper 404 page displayed. So that was production sorted. For development, we [integrated the venerable better_errors](https://github.com/hanami/hanami/pull/1311), wrapped by our own hanami-webconsole gem.
 
 It was only some months later that we realised 404s in development were being returned as 500s. This turned out to be because better_errors defaults to a 500 response code at all times. [In its middleware](https://github.com/BetterErrors/better_errors/blob/fde3b7025db17b5cda13fcf8d08dfb3f76e189f6/lib/better_errors/middleware.rb#L109-L129):
 
@@ -24,7 +24,7 @@ status_code = 500
 response = Rack::Response.new(content, status_code, headers)
 ```
 
-Well, maybe not _quite_ at all times. The lines right beneat `status_code = 500`:
+Well, maybe not _quite_ at all times. The lines right beneath `status_code = 500`:
 
 ```ruby
 status_code = 500
@@ -37,7 +37,7 @@ Looks like Ruby on Rails gets its own little exception carved out here, via some
 
 This is not a new change. It arrived [over ten years ago](https://github.com/BetterErrors/better_errors/pull/176), and I can hardly blame the authors for wanting a way to make this work nicely with the predominant Ruby application framework of the day.
 
-Today, however, is a different day! We’re here to _change_ the Ruby framework balance. 😎 So we needed a way to make this work for Hanami. What didn’t feel feasiable at this point was a significant change to better_errors: our time was limited and at best we only had the appetite for a minor tactical fix.
+Today, however, is a different day! We’re here to _change_ the Ruby framework balance. 😎 So we needed a way to make this work for Hanami. What didn’t feel feasible at this point was a significant change to better_errors: our time was limited and at best we had the appetite only for a minor tactical fix.
 
 [Our resulting fix in webconsole](https://github.com/hanami/webconsole/pull/7) ([along with this counterpart in hanami](https://github.com/hanami/hanami/pull/1330)) does monkey patch better_errors, but I was very pleased with how gently we could do it. The patch is tiny:
 
@@ -89,7 +89,7 @@ def call(env)
 end
 ```
 
-And then once that is done, we can use the exception (if we have one) to fetch an appropriate response code from the hanami app config, and then override better_errors’ response code with our one:
+And then once that is done, we can use the exception (if we have one) to fetch an appropriate response code from the Hanami app config, and then override better_errors’ response code with our own:
 
 ```ruby
 def call(env)
