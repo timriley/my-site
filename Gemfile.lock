@@ -1,99 +1,96 @@
-GIT
-  remote: https://github.com/hanami/controller
-  revision: a2ead8e5eee905bb584d90d9ef7726d7a5d7d019
-  branch: unstable
+PATH
+  remote: ../../hanami/assets
   specs:
-    hanami-controller (2.0.0.alpha1)
-      dry-configurable (~> 0.11, >= 0.11.6)
-      hanami-utils (~> 2.0.alpha)
-      rack (~> 2.0)
+    hanami-assets (2.1.0.rc2)
+      zeitwerk (~> 2.6)
 
-GIT
-  remote: https://github.com/hanami/hanami
-  revision: 1c636b8459bfa82eb52d5be2fd7b433cd4a86d91
-  branch: unstable
+PATH
+  remote: ../../hanami/controller
   specs:
-    hanami (2.0.0.alpha1)
+    hanami-controller (2.1.0.rc2)
+      dry-configurable (~> 1.0, < 2)
+      dry-core (~> 1.0)
+      hanami-utils (~> 2.1.rc)
+      rack (~> 2.0)
+      zeitwerk (~> 2.6)
+
+PATH
+  remote: ../../hanami/hanami
+  specs:
+    hanami (2.1.0.rc2)
       bundler (>= 1.16, < 3)
-      dry-core (~> 0.4)
-      dry-inflector (~> 0.1, >= 0.1.2)
-      dry-monitor
-      dry-system (~> 0.10)
-      hanami-cli (~> 1.0.alpha)
-      hanami-controller (~> 2.0.alpha)
-      hanami-router (~> 2.0.alpha)
-      hanami-utils (~> 2.0.alpha)
-      hanami-view (~> 2.0.alpha)
+      dry-configurable (~> 1.0, < 2)
+      dry-core (~> 1.0, < 2)
+      dry-inflector (~> 1.0, < 2)
+      dry-logger (~> 1.0, < 2)
+      dry-monitor (~> 1.0, >= 1.0.1, < 2)
+      dry-system (~> 1.0, < 2)
+      hanami-cli (~> 2.1.rc)
+      hanami-utils (~> 2.1.rc)
+      zeitwerk (~> 2.6)
 
-GIT
-  remote: https://github.com/hanami/router
-  revision: 3d469cdac3559b65c40b08ace882ac3e407c5b81
-  branch: unstable
+PATH
+  remote: ../../hanami/router
   specs:
-    hanami-router (2.0.0.alpha3)
-      mustermann (~> 1.0)
-      mustermann-contrib (~> 1.0)
+    hanami-router (2.1.0.rc2)
+      mustermann (~> 3.0)
+      mustermann-contrib (~> 3.0)
       rack (~> 2.0)
 
-GIT
-  remote: https://github.com/hanami/view
-  revision: 2c7e9d1d231ae60046f6b237124937fc775c106b
-  branch: main
+PATH
+  remote: ../../hanami/view
   specs:
-    hanami-view (2.0.0.alpha8)
-      concurrent-ruby (~> 1.0)
+    hanami-view (2.1.0.rc2)
       dry-configurable (~> 1.0)
       dry-core (~> 1.0)
       dry-inflector (~> 1.0, < 2)
-      tilt (~> 2.0, >= 2.0.6)
+      temple (~> 0.10.0, >= 0.10.2)
+      tilt (~> 2.3)
+      zeitwerk (~> 2.6)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    break (0.20.0)
+    bigdecimal (3.1.4)
+    break (0.40.0)
     builder (3.2.4)
     coderay (1.1.3)
     commonmarker (0.21.2)
       ruby-enum (~> 0.5)
-    concurrent-ruby (1.1.6)
-    dotenv (2.7.6)
-    dry-auto_inject (0.7.0)
-      dry-container (>= 0.3.4)
-    dry-configurable (0.11.6)
+    concurrent-ruby (1.2.2)
+    dotenv (2.8.1)
+    dry-auto_inject (1.0.1)
+      dry-core (~> 1.0)
+      zeitwerk (~> 2.6)
+    dry-cli (1.0.0)
+    dry-configurable (1.1.0)
+      dry-core (~> 1.0, < 2)
+      zeitwerk (~> 2.6)
+    dry-core (1.0.1)
       concurrent-ruby (~> 1.0)
       zeitwerk (~> 2.6)
+    dry-events (1.0.1)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 1.0, < 2)
+    dry-files (1.1.0)
     dry-inflector (1.0.0)
     dry-initializer (3.1.1)
+    dry-logger (1.0.3)
     dry-logic (1.5.0)
       concurrent-ruby (~> 1.0)
       dry-core (~> 1.0, < 2)
       zeitwerk (~> 2.6)
     dry-monads (1.6.0)
       concurrent-ruby (~> 1.0)
-    dry-equalizer (0.3.0)
-    dry-events (0.2.0)
-      concurrent-ruby (~> 1.0)
-      dry-core (~> 0.4)
-      dry-equalizer (~> 0.2)
-    dry-inflector (0.2.0)
-    dry-initializer (3.0.3)
-    dry-logic (1.0.6)
-      concurrent-ruby (~> 1.0)
-      dry-core (~> 0.2)
-      dry-equalizer (~> 0.2)
-    dry-monads (1.3.5)
-      concurrent-ruby (~> 1.0)
-      dry-core (~> 0.4, >= 0.4.4)
-      dry-equalizer
-    dry-monitor (0.3.2)
-      dry-configurable (~> 0.5)
-      dry-core (~> 0.4)
-      dry-equalizer (~> 0.2)
-      dry-events (~> 0.2)
-    dry-struct (1.3.0)
-      dry-core (~> 0.4, >= 0.4.4)
-      dry-equalizer (~> 0.3)
-      dry-types (~> 1.3)
+      dry-core (~> 1.0, < 2)
+      zeitwerk (~> 2.6)
+    dry-monitor (1.0.1)
+      dry-configurable (~> 1.0, < 2)
+      dry-core (~> 1.0, < 2)
+      dry-events (~> 1.0, < 2)
+    dry-struct (1.6.0)
+      dry-core (~> 1.0, < 2)
+      dry-types (>= 1.7, < 2)
       ice_nine (~> 0.11)
       zeitwerk (~> 2.6)
     dry-system (1.0.1)
@@ -101,17 +98,19 @@ GEM
       dry-configurable (~> 1.0, < 2)
       dry-core (~> 1.0, < 2)
       dry-inflector (~> 1.0, < 2)
+    dry-transformer (1.0.1)
+      zeitwerk (~> 2.6)
     dry-types (1.7.1)
       concurrent-ruby (~> 1.0)
       dry-core (~> 1.0)
       dry-inflector (~> 1.0)
       dry-logic (~> 1.4)
       zeitwerk (~> 2.6)
-    ffi (1.15.5)
+    ffi (1.16.3)
     foreman (0.87.2)
     formatador (1.1.0)
     front_matter_parser (0.2.1)
-    guard (2.18.0)
+    guard (2.18.1)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
       lumberjack (>= 1.0.12, < 2.0)
@@ -124,26 +123,31 @@ GEM
     guard-shell (0.7.2)
       guard (>= 2.0.0)
       guard-compat (~> 1.0)
-    hanami-cli (1.0.0.alpha1)
+    hanami-cli (2.1.0.rc2)
+      bundler (~> 2.1)
+      dry-cli (~> 1.0, < 2)
+      dry-files (~> 1.0, >= 1.0.2, < 2)
+      dry-inflector (~> 1.0, < 2)
+      rake (~> 13.0)
+      zeitwerk (~> 2.6)
+    hanami-utils (2.1.0.rc2)
       concurrent-ruby (~> 1.0)
-      hanami-utils (~> 2.0.alpha)
-    hanami-utils (2.0.0.alpha1)
-      concurrent-ruby (~> 1.0)
-      transproc (~> 1.0)
-    hansi (0.2.0)
-    i18n (1.8.3)
+      dry-core (~> 1.0, < 2)
+      dry-transformer (~> 1.0, < 2)
+    hansi (0.2.1)
+    i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    lumberjack (1.2.8)
+    lumberjack (1.2.9)
     method_source (1.0.0)
-    mustermann (1.1.1)
+    mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
-    mustermann-contrib (1.1.1)
+    mustermann-contrib (3.0.0)
       hansi (~> 0.2.0)
-      mustermann (= 1.1.1)
+      mustermann (= 3.0.0)
     nenv (0.3.0)
     notiffany (0.1.3)
       nenv (~> 0.1)
@@ -151,8 +155,9 @@ GEM
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    rack (2.2.3)
-    rb-fsevent (0.10.4)
+    rack (2.2.8)
+    rake (13.1.0)
+    rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rom (5.3.0)
@@ -183,22 +188,22 @@ GEM
       sequel (>= 4.49)
     ruby-enum (0.9.0)
       i18n
-    ruby2_keywords (0.0.2)
-    sequel (5.34.0)
+    ruby2_keywords (0.0.5)
+    sequel (5.74.0)
+      bigdecimal
     shellany (0.0.1)
-    slim (4.1.0)
-      temple (>= 0.7.6, < 0.9)
-      tilt (>= 2.0.6, < 2.1)
-    sqlite3 (1.6.1)
-      mini_portile2 (~> 2.8.0)
-    temple (0.8.2)
-    thor (1.2.1)
-    tilt (2.0.11)
+    slim (5.1.1)
+      temple (~> 0.10.0)
+      tilt (>= 2.1.0)
+    sqlite3 (1.6.8-arm64-darwin)
+    temple (0.10.3)
+    thor (1.3.0)
+    tilt (2.3.0)
     transproc (1.1.1)
-    zeitwerk (2.6.7)
+    zeitwerk (2.6.12)
 
 PLATFORMS
-  ruby
+  arm64-darwin-22
 
 DEPENDENCIES
   break
@@ -208,20 +213,20 @@ DEPENDENCIES
   dry-core
   dry-inflector
   dry-monads (~> 1.0)
-  dry-system (~> 1.0)
   dry-types (~> 1.0)
   foreman
   front_matter_parser (~> 0.1, >= 0.1.1)
   guard
   guard-shell
   hanami!
+  hanami-assets!
   hanami-controller!
   hanami-router!
   hanami-view!
   pry
   rom (~> 5.0)
   rom-sql (~> 3.2)
-  slim (~> 4.0)
+  slim
   sqlite3
   transproc
 
@@ -229,4 +234,4 @@ RUBY VERSION
    ruby 3.2.1p31
 
 BUNDLED WITH
-   2.1.4
+   2.4.21
