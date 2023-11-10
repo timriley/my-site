@@ -1,4 +1,4 @@
-Hanami.app.register_provider :database, namespace: true do |site|
+Hanami.app.register_provider :database, namespace: true do
   prepare do
     require "sequel"
     require "rom"
