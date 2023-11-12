@@ -1,12 +1,9 @@
-require "site/view/base"
-require "site/view/parts/article"
-
 module Site
   module Views
-    class Article < View::Base
+    class Article < Site::View
       include Deps["repos.article_repo"]
 
-      expose :article, as: View::Parts::Article do |slug:|
+      expose :article, as: Views::Parts::Article do |slug:|
         article_repo.get_by_slug(slug)
       end
     end

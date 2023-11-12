@@ -1,8 +1,6 @@
-require "site/view/base"
-
 module Site
   module Views
-    class About < View::Base
+    class About < Site::View
       configure do |config|
         config.template = "about"
       end

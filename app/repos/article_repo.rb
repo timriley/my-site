@@ -1,5 +1,3 @@
-require "site/repo"
-
 module Site
   module Repos
     class ArticleRepo < Site::Repo[:articles]

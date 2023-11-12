@@ -6,7 +6,7 @@ require "time"
 require "uri"
 
 module Site
-  module View
+  module Views
     module Parts
       class Article < Hanami::View::Part
         def absolute_url

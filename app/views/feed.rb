@@ -1,9 +1,6 @@
-require "site/view/base"
-require "site/view/parts/article"
-
 module Site
   module Views
-    class Feed < View::Base
+    class Feed < Site::View
       include Site::Deps["settings", "repos.article_repo"]
 
       configure do |config|
@@ -12,7 +9,7 @@ module Site
         config.layout = false
       end
 
-      expose :articles, as: View::Parts::Article do
+      expose :articles, as: Views::Parts::Article do
         article_repo.published
       end
 

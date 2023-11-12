@@ -17,21 +17,22 @@ module Site
     def call(root)
       export_dir = File.join(root, settings.export_dir)
 
-      FileUtils.mkdir_p(File.join(export_dir, "assets", "content"))
-      FileUtils.cp_r File.join(root, "assets", "content"), File.join(export_dir, "assets", "content")
+      # tmp
+      # FileUtils.cp_r File.join(root, "assets/content"), File.join(export_dir, "assets/content")
 
-      static_router = Router.new(&Hanami.application.routes)
+      static_router = Router.new(&Hanami.app.routes)
 
       static_router.static_route_handlers.each do |(path, identifier)|
         # TODO: use actual app endpoint resolver
-        action = Hanami.application["actions.#{identifier}"]
+        action = Hanami.app["actions.#{identifier}"]
 
         route = Mustermann.new(path)
 
         if route.names.any?
           action.each do |params|
             # TODO: having to unescape here is a bit gross
-            file_path = URI.unescape(route.expand(:raise, params)) + "/index.html"
+            # LATER TODO: why? something to do with slashes? Figure out what feels clean.
+            file_path = URI::DEFAULT_PARSER.unescape(route.expand(:raise, params)) + "/index.html"
 
             response = action.call(params)
 

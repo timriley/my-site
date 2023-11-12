@@ -1,5 +1,3 @@
-require "site/repo"
-
 module Site
   module Repos
     class TalkRepo < Site::Repo[:talks]

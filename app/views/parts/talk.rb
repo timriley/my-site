@@ -6,7 +6,7 @@ require "time"
 require "uri"
 
 module Site
-  module View
+  module Views
     module Parts
       class Talk < Hanami::View::Part
       end

@@ -27,7 +27,7 @@ module Site
 
         records.each do |record|
           type = record.delete(:type)
-          rom.relations.fetch(inflector[type, :pluralize]).insert(record)
+          rom.relations.fetch(inflector.pluralize(type)).insert(record)
         end
 
         records

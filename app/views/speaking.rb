@@ -1,20 +1,17 @@
-require "site/view/base"
-require "site/view/parts/talk"
-
 module Site
   module Views
-    class Speaking < View::Base
+    class Speaking < Site::View
       include Deps["repos.talk_repo"]
 
       configure do |config|
         config.template = "speaking"
       end
 
-      expose :upcoming_talks, as: View::Parts::Talk do |talks|
+      expose :upcoming_talks, as: Views::Parts::Talk do |talks|
         talks.select { |talk| talk.date > Time.now }
       end
 
-      expose :past_talks, as: View::Parts::Talk do |talks|
+      expose :past_talks, as: Views::Parts::Talk do |talks|
         talks.select { |talk| talk.date < Time.now }
       end
 

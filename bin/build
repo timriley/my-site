@@ -34,4 +34,4 @@ if options[:assets]
   Process.wait pid
 end
 
-Site::Application.build
+Site::App.build

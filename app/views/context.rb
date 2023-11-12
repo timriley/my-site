@@ -4,7 +4,7 @@ require "hanami/view/context"
 require "uri"
 
 module Site
-  module View
+  module Views
     class Context < Hanami::View::Context
       extend Forwardable
 
