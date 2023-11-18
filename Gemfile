@@ -22,6 +22,7 @@ gem "hanami", path: "~/Source/hanami/hanami"
 gem "hanami-assets", path: "~/Source/hanami/assets"
 gem "hanami-controller", path: "~/Source/hanami/controller"
 gem "hanami-router", path: "~/Source/hanami/router"
+gem "hanami-utils", path: "~/Source/hanami/utils"
 gem "hanami-view", path: "~/Source/hanami/view"
 
 gem "pry"
@@ -31,9 +32,16 @@ gem "slim"
 gem "sqlite3"
 gem "transproc"
 
+group :cli, :development, :test do
+  gem "hanami-reloader", path: "~/Source/hanami/reloader"
+end
+
+group :development do
+  gem "puma"
+end
+
 group :development, :test do
   gem "break"
   gem "foreman"
-  gem "guard"
-  gem "guard-shell"
+  gem "guard-puma"
 end

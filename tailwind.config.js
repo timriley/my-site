@@ -14,9 +14,7 @@ module.exports = {
   content: [
     "./public/*.html",
     "./app/views/**/*.rb",
-    "./app/templates/**/*",
-    "./slices/**/views/**/*.rb",
-    "./slices/**/templates/**/*",
+    "./app/templates/**/*"
   ],
   theme: {
     extend: {},
