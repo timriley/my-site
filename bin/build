@@ -29,7 +29,8 @@ if options[:clean]
 end
 
 if options[:assets]
-  command = "bundle exec hanami assets compile"
+  # command = "bundle exec hanami assets compile"
+  command = "npm run assets"
   system(command, in: $stdin, out: $stdout, err: $stderr)
 end
 
