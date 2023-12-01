@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
-ruby "3.2.1"
+ruby "3.2.2"
 
 gem "hanami", github: "hanami/hanami", branch: "main"
 gem "hanami-assets", github: "hanami/assets", branch: "main"
