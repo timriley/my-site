@@ -44,7 +44,6 @@ module Site
               next if URI(node.url).absolute?
 
               node.url = helpers.asset_url(node.url)
-              # node.url = "/assets/#{node.url}"
             end
           end
 
