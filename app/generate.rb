@@ -23,9 +23,9 @@ module Site
 
       static_router = Router.new(&Hanami.app.routes)
 
-      static_router.static_route_handlers.each do |(path, identifier)|
+      static_router.static_route_handlers.each do |(path, key)|
         # TODO: use actual app endpoint resolver
-        action = Hanami.app["actions.#{identifier}"]
+        action = Hanami.app["actions.#{key}"]
 
         route = Mustermann.new(path)
 
