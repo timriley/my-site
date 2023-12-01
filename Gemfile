@@ -29,7 +29,7 @@ gem "sqlite3"
 gem "transproc"
 
 group :cli, :development, :test do
-  gem "hanami-reloader", path: "~/Source/hanami/reloader"
+  gem "hanami-reloader", github: "hanami/reloader", branch: "main"
 end
 
 group :development do

@@ -49,6 +49,15 @@ GIT
       zeitwerk (~> 2.6)
 
 GIT
+  remote: https://github.com/hanami/reloader
+  revision: 16755337ac2bb53db277653ad3f004503646802c
+  branch: main
+  specs:
+    hanami-reloader (2.1.0)
+      hanami-cli (~> 2.1)
+      zeitwerk (~> 2.6)
+
+GIT
   remote: https://github.com/hanami/router
   revision: e0af88dcd3e0ca7acf8c2abc88480b47aa72f3e2
   branch: main
@@ -79,13 +88,6 @@ GIT
       dry-inflector (~> 1.0, < 2)
       temple (~> 0.10.0, >= 0.10.2)
       tilt (~> 2.3)
-      zeitwerk (~> 2.6)
-
-PATH
-  remote: ../../hanami/reloader
-  specs:
-    hanami-reloader (2.1.0.rc1)
-      hanami-cli (~> 2.0)
       zeitwerk (~> 2.6)
 
 GEM
