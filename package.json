@@ -6,9 +6,7 @@
     "assets": "node config/assets.js"
   },
   "dependencies": {
-    "hanami-assets": "github:hanami/assets-js#main"
-  },
-  "devDependencies": {
+    "hanami-assets": "github:hanami/assets-js#main",
     "tailwindcss": "^3.3.3"
   }
 }

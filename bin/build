@@ -30,7 +30,7 @@ end
 
 if options[:assets]
   # command = "bundle exec hanami assets compile"
-  command = "npm run assets"
+  command = "bin/assets"
   system(command, in: $stdin, out: $stdout, err: $stderr)
 end
 
