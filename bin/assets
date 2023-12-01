@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+bundle exec rake tailwind:compile
+bundle exec npm run assets

@@ -6,7 +6,7 @@ published_at: 2009-02-12 22:20:00 +0000
 
 [Sinatra's](http://sinatrarb.com/) minimalist tack encourages you to build just the number of helpers that is required for your app. In doing so, it's also a chance to improve your Ruby fu. While the source for the helpers that come with Rails provides an excellent starting point for your particular subset, they're often built to keep all comers happy. You can do something a lot slimmer for your narrowly focused Sinatra app.
 
-[![](content/images/ss/2e7cfa9d7295.jpg)](http://www.flickr.com/photos/ickypoo/510063218/)
+[![](2e7cfa9d7295.jpg)](http://www.flickr.com/photos/ickypoo/510063218/)
 
 Here's [what I came up with](http://github.com/timriley/unfuddle-helpdesk/blob/46ed4c40f7a217a3bd465c9f7783f065e4462d01/unfuddle_helpdesk.rb#L43) for a cycle helper to alternately colour table rows via cycling their CSS classes:
 

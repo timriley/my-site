@@ -3,7 +3,7 @@
 require "fileutils"
 require "optparse"
 require "bundler/setup"
-require_relative "../system/boot"
+require "hanami/boot"
 
 options = {
   assets: true,
@@ -23,15 +23,14 @@ OptionParser.new do |opts|
 end.parse!
 
 if options[:clean]
-  export_dir = Site::Container.config.root.join(Site::Container[:settings].export_dir)
+  export_dir = Hanami.app.root.join(Hanami.app["settings"].export_dir)
   FileUtils.rm_rf(export_dir, secure: true)
   FileUtils.mkdir_p(export_dir)
 end
 
 if options[:assets]
-  command = "yarn run build"
-  pid = spawn(command, :in => STDIN, :out => STDOUT, :err => STDERR)
-  Process.wait pid
+  command = "bin/assets"
+  system(command, in: $stdin, out: $stdout, err: $stderr)
 end
 
-Site::Container.build
+Site::App.build

@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  a {
+    @apply no-underline text-pink-400;
+  }
+  a:hover {
+    @apply underline;
+  }
+
+  h1 {
+    @apply mb-5 text-3xl font-extrabold;
+  }
+
+  h2 {
+    @apply mb-5 text-2xl font-bold;
+  }
+
+  h3 {
+    @apply mb-4 text-lg font-bold;
+  }
+
+  /* purgecss start ignore */
+  .copy {
+    @apply text-lg;
+  }
+
+  .copy blockquote {
+    @apply ml-6 mb-6;
+    font-style: italic;
+  }
+
+  .copy p {
+    @apply mb-5 leading-normal;
+  }
+
+  /* .copy p:last-child {
+    @apply .mb-0;
+  } */
+
+  .copy ul, .copy ol {
+    @apply mb-6;
+  }
+
+  .copy li {
+    @apply mb-2 leading-normal;
+  }
+
+  .copy h2 {
+    @apply mb-3;
+  }
+
+  .copy h1, .copy h2, .copy h3, .copy h4, .copy h5, .copy h6 {
+    @apply text-pink-500;
+  }
+
+  .copy pre {
+    @apply mb-6 overflow-scroll;
+  }
+}

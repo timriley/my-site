@@ -8,7 +8,7 @@ There are a [few](http://www.rousette.org.uk/blog/archives/quicksilver-activate-
 
 Quicksilver triggers can only be launched by global keybindings or mouse gestures. That is, you can't access them through the main quicksilver interface. A simple way around this is to use Automator to create a custom screensaver launch application:
 
- ![Automator workflow for screensaver launch app](content/images/ss/cc0da2d4473f.jpg)
+ ![Automator workflow for screensaver launch app](cc0da2d4473f.jpg)
 
 Save the workflow as an app called, let's say, "Screensaver", put it in your Applications folder, and you can then use Quicksilver to activate your screensaver like you would launch any ordinary app.
 

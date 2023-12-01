@@ -4,7 +4,7 @@ permalink: 2008/01/21/the-canberra-ruby-crew-and-getting-involved
 published_at: 2008-01-21 02:55:00 +0000
 ---
 
-[![Matt and I working on migrating an app to Rails 2.](content/images/ss/73f4e0d4bce4.jpg)](http://www.flickr.com/photos/sabman/2201755530/)
+[![Matt and I working on migrating an app to Rails 2.](73f4e0d4bce4.jpg)](http://www.flickr.com/photos/sabman/2201755530/)
 
 Last Friday night we ran the inaugural CRC (_Canberra Ruby Crew_) meeting. It was a good time; we ate, wrote some code, debugged some code and played some Guitar Hero. There were just three of us in attendance, but there should be at least five for the next month's meeting.
 

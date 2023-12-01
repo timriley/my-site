@@ -6,7 +6,7 @@ published_at: 2009-02-25 01:00:00 +0000
 
 Hugh's [forays back into shared hosting](http://hughevans.net/2009/02/22/sinatra-on-dreamhost) over the last week have reminded me that I could make better use of the cheap [Dreamhost](http://dreamhost.com/) account that I have had languishing for the last few years. I am going to migrate the few things I have running on my more expensive Slicehost slice. Quick way to save a bit of money each month, particularly with the equally languishing Australian Dollar.
 
- ![Dreamhost stickers](content/images/ss/61a73383d000.jpg)
+ ![Dreamhost stickers](61a73383d000.jpg)
 
 First of these is Gitosis, which is a very handy way to securely store and share your private Git repositories. Since most accounts on Dreamhost are on shared host, you'll need to install it inside your home directory. Turns out this is quite simply done, and Marco Borromeo [provides a good tutorial](http://blog.marcoborromeo.com/how-to-install-gitosis-on-a-dreamhost-shared-account).
 
