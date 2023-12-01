@@ -7,13 +7,9 @@ module Site
     include Dry::Monads::Result::Mixin
     include Dry::Monads::Do.for(:call)
 
-    include Deps[
-      "prepare",
-      "generate",
-    ]
+    include Deps["generate"]
 
     def call(root)
-      yield prepare.(root)
       yield generate.(root)
       Success()
     end

@@ -17,8 +17,9 @@ module Site
     def call(root)
       export_dir = File.join(root, settings.export_dir)
 
-      # tmp
-      # FileUtils.cp_r File.join(root, "assets/content"), File.join(export_dir, "assets/content")
+      # Copy assets into place
+      FileUtils.cp_r(root.join("public", "assets"), File.join(export_dir, "assets"))
+      FileUtils.cp(root.join("public", "assets.json"), export_dir)
 
       static_router = Router.new(&Hanami.app.routes)
 

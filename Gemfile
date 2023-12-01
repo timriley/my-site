@@ -4,6 +4,14 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 ruby "3.2.1"
 
+gem "hanami", github: "hanami/hanami", branch: "main"
+gem "hanami-assets", github: "hanami/assets", branch: "main"
+gem "hanami-cli", github: "hanami/cli", branch: "main"
+gem "hanami-controller", github: "hanami/controller", branch: "main"
+gem "hanami-router", github: "hanami/router", branch: "main"
+gem "hanami-utils", github: "hanami/utils", branch: "main"
+gem "hanami-view", github: "hanami/view", branch: "main"
+
 gem "builder", "~> 3.2"
 gem "commonmarker", "~> 0.21.0"
 gem "front_matter_parser", "~> 0.1", ">= 0.1.1"
@@ -12,18 +20,6 @@ gem "dry-core"
 gem "dry-inflector"
 gem "dry-monads", "~> 1.0"
 gem "dry-types", "~> 1.0"
-gem "dotenv"
-# gem "hanami", github: "hanami/hanami", branch: "unstable"
-# gem "hanami-controller", github: "hanami/controller", branch: "unstable"
-# gem "hanami-router", github: "hanami/router", branch: "unstable"
-# gem "hanami-view", github: "hanami/view", branch: "master"
-
-gem "hanami", path: "~/Source/hanami/hanami"
-gem "hanami-assets", path: "~/Source/hanami/assets"
-gem "hanami-controller", path: "~/Source/hanami/controller"
-gem "hanami-router", path: "~/Source/hanami/router"
-gem "hanami-utils", path: "~/Source/hanami/utils"
-gem "hanami-view", path: "~/Source/hanami/view"
 
 gem "pry"
 gem "rom", "~> 5.0"

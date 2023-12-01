@@ -8,7 +8,7 @@ Screenshots from the retina MacBook Pro look comically large when I share them w
 
 Automator makes it easy to build an app that will halve the dimensions of the images. Open Automator, choose to build a new _Application_, then add these steps:
 
- ![Automator actions for retina image downscaling](content/images/ss/1a67e9a39885.png)
+ ![Automator actions for retina image downscaling](1a67e9a39885.png)
 
 Save it to `/Applications` and you're done. Then, dragging an image onto the app's icon will immediately copy it to your desktop and rescale it. Put it in your Dock for even easy access, or if you use [LaunchBar](http://www.obdev.at/products/launchbar/index.html), you can do it even faster with [InstantSend](http://www.obdev.at/resources/launchbar/help/index.php?chapter=InstantSend).
 

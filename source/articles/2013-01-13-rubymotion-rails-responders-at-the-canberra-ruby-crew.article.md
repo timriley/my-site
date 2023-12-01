@@ -6,7 +6,7 @@ published_at: 2012-06-20 19:30:00 +0000
 
 This week the [Canberra Ruby Crew](http://canberraruby.com/) meetings kicked off again after a long hiatus. Both Hugh and I gave presentations. Hugh spoke about our use of Rails responders for tidily offering layout-less content intended for display in modal popup windows. You won't see his slides online just yet, but his use of [Impress.js](http://bartaz.github.com/impress.js) with the demos embedded in iframes was _ingenious._
 
- ![Hugh's Rails Responders Slides](content/images/ss/0d84ce63aa47.png)
+ ![Hugh's Rails Responders Slides](0d84ce63aa47.png)
 
 I gave an introduction to [RubyMotion](http://www.rubymotion.com/), the impressive new Ruby implementation for developing iOS apps:
 

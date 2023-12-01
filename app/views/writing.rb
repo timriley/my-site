@@ -3,11 +3,7 @@ module Site
     class Writing < Site::View
       include Deps["repos.article_repo"]
 
-      configure do |config|
-        config.template = "writing"
-      end
-
-      expose :articles, as: Views::Parts::Article do
+      expose :articles do
         article_repo.published
       end
     end

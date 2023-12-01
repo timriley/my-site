@@ -4,7 +4,7 @@ permalink: 2013/01/11/announcing-decaf-sucks-11
 published_at: 2013-01-10 08:00:00 +0000
 ---
 
-![](content/images/ss/f576e3f4d908.png)
+![](f576e3f4d908.png)
 
 It's [been a while](http://icelab.com.au/notes/decaf-sucks-launch-countdown-a-restrospective/) since we've talked about [Decaf Sucks](http://decafsucks.com/) on the iPhone. Our first release has run smoothly for a year and a half, helping many thousands of iPhone owners find better coffee. Thanks to our well caffeinated contributors, nearly half of our reviews are now submitted from the app.
 

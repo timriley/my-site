@@ -6,7 +6,7 @@ published_at: 2010-02-14 22:00:00 +0000
 
 Earlier this month was [BarCamp Canberra 2010](http://barcamp.org/BarCampCanberra), this city's third BarCamp event. Having never been to one, I thought it was high time I checked it out. Given that most of the attendees would be unfamiliar with Ruby, it was also a prime opportunity to give an introductory-level talk. I chose to talk about Sinatra, since it was small enough to allow for a good overview in the 20-minute time slot.
 
-[![Sinatra title slide](content/images/ss/35b47adf56c0.png)](http://bcc2010-sinatra.heroku.com/)
+[![Sinatra title slide](35b47adf56c0.png)](http://bcc2010-sinatra.heroku.com/)
 
 This was my first long-form presentation, and I'm happy with how it went. I had an interested audience with some good questions, and we were even able to fit in a live deployment of a sample app to [Heroku](http://heroku.com/). Hopefully I also attracted a few more people to our [Canberra Ruby Crew](http://canberraruby.com/) meets!
 

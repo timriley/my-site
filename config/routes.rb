@@ -5,10 +5,11 @@ module Site
     root to: "home"
 
     get "writing", to: "writing"
-    get "writing/:slug", to: "article"
+    get "writing/*slug", to: "article"
     get "feed.xml", to: "feed"
 
     get "speaking", to: "speaking"
+    get "sponsors", to: "sponsors"
     get "about", to: "about"
   end
 end

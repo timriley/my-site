@@ -1,11 +1,28 @@
-PATH
-  remote: ../../hanami/assets
+GIT
+  remote: https://github.com/hanami/assets
+  revision: 6602bdc66417bca652ca85e3cc027e00019ebff4
+  branch: main
   specs:
-    hanami-assets (2.1.0.rc2)
+    hanami-assets (2.1.0)
       zeitwerk (~> 2.6)
 
-PATH
-  remote: ../../hanami/controller
+GIT
+  remote: https://github.com/hanami/cli
+  revision: 825e7252292a7f25ef58f654b11aa87a73802a84
+  branch: main
+  specs:
+    hanami-cli (2.1.0)
+      bundler (~> 2.1)
+      dry-cli (~> 1.0, < 2)
+      dry-files (~> 1.0, >= 1.0.2, < 2)
+      dry-inflector (~> 1.0, < 2)
+      rake (~> 13.0)
+      zeitwerk (~> 2.6)
+
+GIT
+  remote: https://github.com/hanami/controller
+  revision: e3f73de4b542bdf94242cce514c0c17446252aa0
+  branch: main
   specs:
     hanami-controller (2.1.0)
       dry-configurable (~> 1.0, < 2)
@@ -14,10 +31,12 @@ PATH
       rack (~> 2.0)
       zeitwerk (~> 2.6)
 
-PATH
-  remote: ../../hanami/hanami
+GIT
+  remote: https://github.com/hanami/hanami
+  revision: 97af4865754b197a0f614884097cb1dd85da3cfa
+  branch: main
   specs:
-    hanami (2.1.0.rc2)
+    hanami (2.1.0)
       bundler (>= 1.16, < 3)
       dry-configurable (~> 1.0, < 2)
       dry-core (~> 1.0, < 2)
@@ -25,42 +44,48 @@ PATH
       dry-logger (~> 1.0, < 2)
       dry-monitor (~> 1.0, >= 1.0.1, < 2)
       dry-system (~> 1.0, < 2)
-      hanami-cli (~> 2.1.rc)
-      hanami-utils (~> 2.1.rc)
+      hanami-cli (= 2.1.0)
+      hanami-utils (~> 2.1)
       zeitwerk (~> 2.6)
 
-PATH
-  remote: ../../hanami/reloader
+GIT
+  remote: https://github.com/hanami/router
+  revision: e0af88dcd3e0ca7acf8c2abc88480b47aa72f3e2
+  branch: main
   specs:
-    hanami-reloader (2.1.0.rc2)
-      hanami-cli (~> 2.1.rc)
-      zeitwerk (~> 2.6)
-
-PATH
-  remote: ../../hanami/router
-  specs:
-    hanami-router (2.1.0.rc2)
+    hanami-router (2.1.0)
       mustermann (~> 3.0)
       mustermann-contrib (~> 3.0)
       rack (~> 2.0)
 
-PATH
-  remote: ../../hanami/utils
+GIT
+  remote: https://github.com/hanami/utils
+  revision: b4e02dbd4102c93ae5797aee4a0b146fda1b74bb
+  branch: main
   specs:
     hanami-utils (2.1.0)
       concurrent-ruby (~> 1.0)
       dry-core (~> 1.0, < 2)
       dry-transformer (~> 1.0, < 2)
 
-PATH
-  remote: ../../hanami/view
+GIT
+  remote: https://github.com/hanami/view
+  revision: e995c2876a9acce594439031f19860c241d22ee3
+  branch: main
   specs:
-    hanami-view (2.1.0.rc2)
+    hanami-view (2.1.0)
       dry-configurable (~> 1.0)
       dry-core (~> 1.0)
       dry-inflector (~> 1.0, < 2)
       temple (~> 0.10.0, >= 0.10.2)
       tilt (~> 2.3)
+      zeitwerk (~> 2.6)
+
+PATH
+  remote: ../../hanami/reloader
+  specs:
+    hanami-reloader (2.1.0.rc1)
+      hanami-cli (~> 2.0)
       zeitwerk (~> 2.6)
 
 GEM
@@ -139,13 +164,6 @@ GEM
       guard (~> 2.14)
       guard-compat (~> 1.2)
       puma (>= 4.0, < 7)
-    hanami-cli (2.1.0.rc2)
-      bundler (~> 2.1)
-      dry-cli (~> 1.0, < 2)
-      dry-files (~> 1.0, >= 1.0.2, < 2)
-      dry-inflector (~> 1.0, < 2)
-      rake (~> 13.0)
-      zeitwerk (~> 2.6)
     hansi (0.2.1)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
@@ -161,7 +179,7 @@ GEM
       hansi (~> 0.2.0)
       mustermann (= 3.0.0)
     nenv (0.3.0)
-    nio4r (2.5.9)
+    nio4r (2.6.1)
     notiffany (0.1.3)
       nenv (~> 0.1)
       shellany (~> 0.0)
@@ -210,7 +228,7 @@ GEM
     slim (5.2.0)
       temple (~> 0.10.0)
       tilt (>= 2.1.0)
-    sqlite3 (1.6.8-arm64-darwin)
+    sqlite3 (1.6.9-arm64-darwin)
     temple (0.10.3)
     thor (1.3.0)
     tilt (2.3.0)
@@ -234,6 +252,7 @@ DEPENDENCIES
   guard-puma
   hanami!
   hanami-assets!
+  hanami-cli!
   hanami-controller!
   hanami-reloader!
   hanami-router!
