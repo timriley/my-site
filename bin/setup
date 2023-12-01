@@ -1,14 +1,57 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
-require "fileutils"
+def setup
+  header "💎 Installing gems"
+  system! "gem install bundler --conservative"
+  system! "bundle check || bundle install"
 
-APP_ROOT = File.expand_path("..", __dir__)
+  header "🌌 Installing npm packages"
+  system! "npm i"
 
-Dir.chdir(APP_ROOT) do
-  require "bundler"
-  Bundler.setup
+  header "⭐️ Everything is fantastic!"
+  puts "For commonly needed commands, run:\n"
+  puts "  bin/setup help"
+end
 
-  system "yarn"
+def help
+  puts <<~TEXT
+    Useful commands:
 
-  FileUtils.cp ".env-example", ".env" unless File.exist?(".env")
+      bin/setup
+          # set up the app
+
+      bundle exec hanami dev
+          # run app locally
+
+      bin/build
+          # build the site as static files
+
+      bin/setup help
+          # show this help
+  TEXT
+end
+
+$header_used = false
+def header(message)
+  puts "#{"\n" if $header_used}\e[1m#{message}\e[0m\n\n"
+  $header_used = true
+end
+
+# Executes system commands for setup.
+#
+# On failure, displays the executed command itself to help the user understand what went wrong.
+def system!(*args)
+  unless system(*args)
+    msg = (args.length == 1) ? args.first.inspect : args.inspect
+    puts "\n\e[1mCommand failed:\e[0m #{msg}"
+
+    exit $?.exitstatus
+  end
+end
+
+if %w[help --help -h].include?(ARGV[0])
+  help
+else
+  setup
 end
