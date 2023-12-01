@@ -30,8 +30,7 @@ end
 
 if options[:assets]
   command = "bundle exec hanami assets compile"
-  pid = spawn(command, :in => STDIN, :out => STDOUT, :err => STDERR)
-  Process.wait pid
+  system(command, in: $stdin, out: $stdout, err: $stderr)
 end
 
 Site::App.build
