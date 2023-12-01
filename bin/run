@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby
-# frozen_string_literal: true
-
-require "bundler/setup"
-require "hanami/cli/application/cli"
-# require_relative "../lib/hanami/cli/commands"
-
-Hanami::CLI::Application::CLI.new.call
