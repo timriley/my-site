@@ -10,13 +10,6 @@ module Site
           yield({slug: article.permalink})
         end
       end
-
-      # def generate_each
-      #   article_repo.published.each do |article|
-      #     slug = article.permalink
-      #     yield [{slug: slug}, view.(slug: slug)]
-      #   end
-      # end
     end
   end
 end
