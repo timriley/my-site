@@ -47,9 +47,14 @@
   .copy ul, .copy ol {
     @apply mb-6;
   }
-
   .copy li {
     @apply mb-2 leading-normal;
+  }
+  .copy ul li {
+    @apply list-disc;
+  }
+  .copy ol li {
+    @apply list-decimal;
   }
 
   .copy h2 {
